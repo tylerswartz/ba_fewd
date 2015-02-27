@@ -71,6 +71,8 @@ As you become a stronger ruby programmer you can remove the () when calling a me
 `ls` gives you all the ruby methods available to that object. `ls 4` gives you all the methods for a integer. Very helpful when learning. `ls 'string'` for methods that are available for strings. `ls` only works when running `pry`.
 
 
+Homework: read and do excercises chapter 2 - 8.
+
 
 
 
