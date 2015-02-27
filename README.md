@@ -50,15 +50,40 @@ d) boolean - a statement that resolves in `true` or `false`.
 
 Ruby does not automatically convert data types. Use `.to_s` to make a number into a string or `.to_i` to make a string into a integer.
 
-<strong>Methods</strong> are a way to store a block of code, such as a formula and call it at a later time. THey are like math equations. Methods and funcitons are often used interchangeably in Ruby. They have a name, parameters and return values. Methods in Ruby <em>always</em> have return values.
+<strong>Methods</strong> are a way to store a block of code, such as a formula and call it at a later time. They are like math equations. Methods have a name, parameters and return values. Methods in Ruby <em>always</em> have return values. Methods let us train the program to remember a set of code to perform later. Making a new method is called <em>declaring</em> a method. They are sometimes called functions, but they are not exactly the same thing.
 
 Example method:
 ```
 def multiply(x,y)
-	x + y
+	x * y
 end
 ```
 Then you call that method and pass in the variables, `multiply(7,2)` returns `14`.
+
+As you become a stronger ruby programmer you can remove the () when calling a method. `multiply 7, 2`.
+
+`puts` displays the string that follows it. `puts 'hello world' => hello world`.
+
+`gets` waits for an input. Gets always take the `\n` (escaping N) at the back of the input because that is a 'new line' caused by the enter button compeleting the input.
+
+`.chomp` removes any tabs, whitespaces, escaping N's, from the get. `gets.chomp` would remove the trailing `\n` from the input. 
+
+`ls` gives you all the ruby methods available to that object. `ls 4` gives you all the methods for a integer. Very helpful when learning. `ls 'string'` for methods that are available for strings. `ls` only works when running `pry`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
