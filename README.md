@@ -27,9 +27,11 @@ Stop -> Think -> Code
 
 Git commands to add hw.
 Go to bewd_sf_8_homework/tylerswartz
-`Git add . -A`
-`Git commit m"msg"`
-`Git push`
+```
+Git add . -A<br>
+Git commit m"msg"<br>
+Git push
+```
 Then go to github and press the pull request button.
 
 <em>2.26.15</em>
