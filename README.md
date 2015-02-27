@@ -25,3 +25,12 @@ Think like a developer. When you get stuck on a problem it's important to follow
 
 Stop -> Think -> Code
 
+Git commands to add hw.
+Go to bewd_sf_8_homework/tylerswartz
+`Git add . -A`
+`Git commit m"msg"`
+`Git push`
+Then go to github and press the pull request button.
+
+<em>2.26.15</em>
+
