@@ -19,7 +19,7 @@ Think like a developer. When you get stuck on a problem it's important to follow
 	<li>Think: 'what problem am I trying to solve?'</li>
 	<li>Think: 'what assumptions am I making?'</li>
 	<li>Think: 'how can I solve it?' (trust your first instinct)</li>
-	<li>If you're not sure, do reasearch or ask peers.</li>
+	<li>If you're not sure, do research or ask peers.</li>
 	<li>Once you understand it, then you write your code.</li>
 </ol>
 
@@ -64,14 +64,14 @@ As you become a stronger ruby programmer you can remove the () when calling a me
 
 `puts` displays the string that follows it. `puts 'hello world' => hello world`.
 
-`gets` waits for an input. Gets always take the `\n` (escaping N) at the back of the input because that is a 'new line' caused by the enter button compeleting the input.
+`gets` waits for an input. Gets always take the `\n` (escaping N) at the back of the input because that is a 'new line' caused by the enter button completing the input.
 
-`.chomp` removes any tabs, whitespaces, escaping N's, from the get. `gets.chomp` would remove the trailing `\n` from the input. 
+`.chomp` removes any tabs, white spaces, escaping N's, from the get. `gets.chomp` would remove the trailing `\n` from the input. 
 
 `ls` gives you all the ruby methods available to that object. `ls 4` gives you all the methods for a integer. Very helpful when learning. `ls 'string'` for methods that are available for strings. `ls` only works when running `pry`.
 
 
-Homework: read and do excercises chapter 2 - 8.
+Homework: read and do exercises chapter 2 - 8.
 
 
 
