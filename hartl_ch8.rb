@@ -4,14 +4,16 @@ puts "Hi, I'm going to sort a-z any words you'd like. Start by typing your words
 
 words = []
 
-x = gets
-puts x
-# while gets != '\n'
-# 	new_word = gets.chomp.upcase
-# 	words.push new_word
-# end
+while true
+	response = gets
+	response.capitalize!
+	words.push(response.chomp)
+	if response == "\n"
+		break
+	end 
+end
 
-# words.sort
+puts "Here is your list sorted a-z:"
+puts words.sort
 
-# puts words
 
