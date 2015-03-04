@@ -44,8 +44,8 @@ Ruby gem <strong>pry</strong> allows you to do ruby in the console. Good for pra
 
 <strong>Data Types:</strong>
 <ol>
-	<li>integer or fixnum - which are whole numbers. `1` and `2`.</li>
-	<li>floats - numbers with decimals. `1.334` and `2.0`.</li>
+	<li>integer or fixnum - which are whole numbers.  `1` and  `2`.</li>
+	<li>floats - numbers with decimals.  `1.334` and  `2.0`.</li>
 	<li>string - a line of text. `'this is a string'`.</li>
 	<li>boolean - a statement that resolves in `true` or `false`.</li>
 </ol>
