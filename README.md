@@ -44,10 +44,10 @@ Ruby gem <strong>pry</strong> allows you to do ruby in the console. Good for pra
 
 <strong>Data Types:</strong>
 <ol>
-	<li>integer or fixnum - which are whole numbers. <code>1</code> and  `2`.</li>
-	<li>floats - numbers with decimals.  `1.334` and  `2.0`.</li>
-	<li>string - a line of text. `'this is a string'`.</li>
-	<li>boolean - a statement that resolves in `true` or `false`.</li>
+	<li>integer or fixnum - which are whole numbers. <code>1</code> and <code>2`.</li>
+	<li>floats - numbers with decimals. <code>1.334` and <code>2.0</code>.</li>
+	<li>string - a line of text. <code>this is a string</code>.</li>
+	<li>boolean - a statement that resolves in <code>true</code> or <code>false</code>.</li>
 </ol>
 
 Ruby does not automatically convert data types. Use `.to_s` to make a number into a string or `.to_i` to make a string into a integer.
