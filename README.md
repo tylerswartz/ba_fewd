@@ -75,6 +75,29 @@ As you become a stronger ruby programmer you can remove the () when calling a me
 
 Homework: read and do exercises chapter 2 - 8.
 
+<em>3.3.15</em>
+
+<strong>Collections</strong> are groups of data. There are two common types of collections, Arrays and Hashes.
+
+<strong>Arrays</strong> don't have labels. They are a collection of data that have a numerical index that starts at 0. Ruby allows you to hold any type of data in an array.
+```
+names = ['john','james','tyler']
+```
+Since arrays are <em>Objects</em>, they can have their own methods. `names.first` returns `"john"`.
+
+To add another name to the array use `names.push 'jody'` or `names << 'Jody'`.
+
+To check if a value is in the array use `names.include? 'tyler'` => `true`
+
+You can also use a method when looking through an array. Let's say there are two `'tyler'` in the array and we want to find them all. `names.find_all { |x| x == 'tyler'}`.
+
+`.split` and `.join` are used a lot. `names.join ', '` => `'john, james, tyler'`.
+
+<strong>Hashes</strong> have labels that make selecting the value simpler.
+```
+person = {name: 'tyler', address: '123 Main St'}
+```
+
 
 
 
