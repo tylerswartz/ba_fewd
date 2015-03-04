@@ -93,19 +93,60 @@ You can also use a method when looking through an array. Let's say there are two
 
 `.split` and `.join` are used a lot. `names.join ', '` => `'john, james, tyler'`.
 
-<strong>Hashes</strong> have labels that make selecting the value simpler.
+<strong>Hashes</strong> are collections just like Arrays. However instead of using numbers as an <em>index</em>, it uses other values to access the data held in the hash. These are called <em>keys</em>.
 ```
 person = {name: 'tyler', address: '123 Main St'}
+<!-- or -->
+number = {'John' = '123-345-3421', 'Tyler' = '143-321-2334'}
 ```
 
+Arrays and Hashes together! 
+```
+clothing = {socks: ["red","green"], shirts:["blue","green"] }
+users = [ {id: 1, name: "Bill", username: "bigg_bill"}, {id: 2, name: "John", username: "jason"}]
+```
 
+How to store data in a hash:
+```
+time_travlers = {'Doctor Who' => 'TARDIS', 'Marty McFly' => 'Delorian'}
+```
 
+Create an array of TV shows that has hashes of data:
+```
+tv_shows = [
+						{:show_name => 'It's Always Sunny', :rating => 10, :year => 2003},
+						{:show_name => 'House of Cards', :rating => 8, :year => 2013},
+						{:show_name => 'Breaking Bad', :rating => 7, :year => 2008}]
+```
+To identify the keys of the hash use `tv_shows.keys` => `['show_name','rating','year']`.
 
+To navigate through the array and hash:
+```
+tv_shows[0]['show_name']
+=> 'It's Always Sunny'
+```
 
+<strong>Loop</strong> is running code and then starting over. <strong>Iteration</strong> is repeating a loop until satisfying some condition.
+```
+dancing = true
+while dancing do
+	puts "I'm dancing and I won't stop"
+end
+```
 
+To loop through an index use the `each` method.
+```
+rocks.each do |rock|
+	puts rock
+end
+```
+A block is a special ruby way of passing a block of code as an argument to a method in a very easy to read and write way.
 
-
-
+Homework
+<ol>
+	<li>Secret number exercise (use Resources.md file for reference.) Due on Tuesday</li>
+	<li>Read the Bastard's Book of Ruby Collections chapter (link in Resources.md)</li>
+</ol>
 
 
 
