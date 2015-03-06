@@ -213,6 +213,7 @@ puts "# 18: #{categories == ["Puppies", "Music", "Kittens"]}"
 #--------------------------------------------
 
 
+
 #--------------------------------------------
 # 19. Remove the last item from the categories array.
 
