@@ -37,26 +37,27 @@
 ###############################################################################
 
 
+
 #Game Methods
 
-def check_guess(x)
-	if x == secret_number
-		right = true
+def check_guess(guess,secret_number)
+	if guess == secret_number
+		return 'correct'
 	else
-		if x < secret_number
-			lower = true
+		if guess < secret_number
+			return 'lower'
 		else
-			lower = false
+			return 'higher'
 		end
 	end
 end
 
-def num_guess_check()
-	if num_guesses == 3
+def num_guess_check(y)
+	if y == 3
 		puts "You ran out of guesses. The secret number was:" + secret_number.to_s
-		break
+		put "END - need break"
 	else
-		puts "You have " + (3 - num_guesses) + " left. Guess again."
+		puts "You have " + (3 - y) + " left. Guess again."
 	end
 end
 
@@ -87,19 +88,17 @@ num_guesses = 0
 puts "What's your first guess?"
 
 while true
-	guess = gets.chomp
+	guess = gets.chomp.to_i
 	num_guesses+=
-	check_guess(guess)
-	if right == false
-		if lower == true
-			puts "You are close, but a little too high."
-			num_guess_check
-		else
-			puts "You are close, but a little too low."
-			num_guess_check
-		end
-	else
+	check_guess(guess,secret_number)
+	if check_guess == 'correct'
 		puts "Congrats, you won " + player_name + "!!!"
+	elsif check_guess == 'lower'
+		puts "You are close, but a little too high."
+		num_guess_check(num_guesses)
+	elsif check_guess == 'higher'
+		puts "You are close, but a little too low."
+		num_guess_check(num_guesses)
 	end
 end
 
