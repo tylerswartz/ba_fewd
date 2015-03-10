@@ -40,24 +40,26 @@
 
 #Game Methods
 
+#Method to see how close guess is to the secret number. Returns is the guess is correct or whether the guess was too low or too high. This is then used by an IF statement to decide how the game should proceed.
 def check_guess(guess,secret_number)
 	if guess == secret_number
 		return 'correct'
 	else
 		if guess < secret_number
-			return 'lower'
+			return 'low'
 		else
-			return 'higher'
+			return 'high'
 		end
 	end
 end
 
-def num_guess_check(y)
+#Method to keep track of the number of guesses left and exit the game if they reach 3.
+def num_guess_check(y,secret_number)
 	if y == 3
-		puts "You ran out of guesses. The secret number was:" + secret_number.to_s
-		put "END - need break"
+		puts "You ran out of guesses. The secret number was: " + secret_number.to_s
+		exit
 	else
-		puts "You have " + (3 - y) + " left. Guess again."
+		puts "You have " + (3 - y).to_s + " guesses left. Guess again."
 	end
 end
 
@@ -82,23 +84,24 @@ puts "3. That's it. Let's go."
 #Play Game
 secret_number = rand(1..10)
 puts "Okay...I've got the secret number."
-
-num_guesses = 0
-
 puts "What's your first guess?"
 
+#Set guess counter to zero.
+num_guesses = 0
+
+#Loop that conducts game play and calls methods to check guess and count remaining guesses.
 while true
 	guess = gets.chomp.to_i
-	num_guesses+=
-	check_guess(guess,secret_number)
-	if check_guess == 'correct'
-		puts "Congrats, you won " + player_name + "!!!"
-	elsif check_guess == 'lower'
-		puts "You are close, but a little too high."
-		num_guess_check(num_guesses)
-	elsif check_guess == 'higher'
+	num_guesses = num_guesses + 1
+	if check_guess(guess,secret_number) == 'correct'
+		puts "Congrats, you won " + player_name + "!!! Nice job with the correct guess of " + secret_number.to_s + "!"
+		exit
+	elsif check_guess(guess,secret_number) == 'low'
 		puts "You are close, but a little too low."
-		num_guess_check(num_guesses)
+		num_guess_check(num_guesses,secret_number)
+	elsif check_guess(guess,secret_number) == 'high'
+		puts "You are close, but a little too high."
+		num_guess_check(num_guesses,secret_number)
 	end
 end
 
