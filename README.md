@@ -148,8 +148,112 @@ Homework
 	<li>Read the Bastard's Book of Ruby Collections chapter (link in Resources.md)</li>
 </ol>
 
+<em>3.5.15</em>
+
+Out of town, missed class. Topic was APIs
+
+```
+# Create a Ruby program that will output information from an API. Example APIs in Resources.md, both beginner and advanced. Save the file to your personal homework folder /api01 folder with the name of the resource. (like "reddit_api.rb").
+
+#required
+require 'json'
+require 'rest-client'
+
+#ask for zipcode
+puts 'This is outputed information from the Google Maps API'
+puts 'What US zipcode would you like to look up?'
+zipcode = gets.chomp
+
+#send GET request to Google
+maps_api = JSON.load(RestClient.get("http://maps.googleapis.com/maps/api/geocode/json?address=" + zipcode))
+
+#select and store the lat & lng data
+lat = maps_api['results'][0]['geometry']['location']['lat']
+long = maps_api['results'][0]['geometry']['location']['lng']
+
+#output data
+puts "Here is the latitude and longitude of " + zipcode.to_s + "..."
+puts "Latitude: " + lat.to_s
+puts "Longitude: " + long.to_s
+```
+
+<em>3.10.15</em>
+
+<strong>Object Oriented Programming</strong> is a way of defining programs using <em>objects</em>. Just like methods allow us to reuse code, Objects allow us to create things that behave in similar ways to each other. Objects tie together related behaviors (methods) and data (variables) to match the way we think about things.
+
+<em>Class</em> is a "blueprint" for an object. It defines what an object will look like and how it will....
+
+Defining a class
+```
+class House
+end
+```
+<em>Instance</em> is the creation of an Object from the Class blueprint.
+Creating a new instance with `my_house = House.new`. Note that capitalization matters.
+
+<strong>Basic Class Example</strong>
+
+```
+class Person
+	attr_accessor :name, :age, :address
+
+	def greet
+		puts "Hi my name is #{@name}"
+	end
+
+	def address
+		puts "My address is #{@address}"
+	end
+end
+
+eric = Person.new
+eric.name = "Eric"
+eric.address = "123 Rock St. Oakland"
+
+puts eric.greet
+puts eric.address
+```
+<ol>
+	<li>Why use objects?</li>
+		<ul>
+			<li>Groups together related methods</li>
+			<li>Person: greet, share_address</li>
+			<li>String: upcase, downcase, split</li>
+			<li>Array: length, first, shuffle</li>
+		</ul>
+	<li>Ensure that data storage is consistent</li>
+		<ul>
+			<li>Hash: can have any key</li>
+			<li>Object: can only have specified attributes (defined using `attr_accessor`)</li>
+		</ul>
+	<li>Ensures that data and behavior are </li>
+		<ul>
+			<li>Hash: only has built-in Ruby methods</li>
+			<li>Object: can define any useful methods you want</li>
+		</ul>
+</ol>
+
+<em>class example of creating an Apartment object</em>
+```
+class Apartment
+	attr_accessor :name, :rent, :sqft, :num_bedrooms, :num_bathrooms
+
+	def initialize(name,rent,sqft,num_bedrooms,num_bathrooms)
+		@name = name
+		@rent = rent
+		@sqft = sqft
+		@num_bedrooms = num_bedrooms
+		@num_bathrooms = num_bathrooms
+	end
+end
+
+oak_wood = Apartment.new('Oak Wood Apartments',2000,1500,2,1)
+```
 
 
+
+
+ 
 
 
 
