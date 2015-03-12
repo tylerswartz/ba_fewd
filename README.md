@@ -214,7 +214,7 @@ puts eric.greet
 puts eric.address
 ```
 
-Why use objects?
+<strong>Why use objects?</strong>
 <ol>
 	<li>Groups together related methods
 		<ul>
@@ -223,16 +223,18 @@ Why use objects?
 			<li>Array: length, first, shuffle</li>
 		</ul>
 	</li>
-	<li>Ensure that data storage is consistent</li>
+	<li>Ensure that data storage is consistent
 		<ul>
 			<li>Hash: can have any key</li>
 			<li>Object: can only have specified attributes (defined using <code>attr_accessor</code>)</li>
 		</ul>
-	<li>Ensures that data and behavior are </li>
+	</li>
+	<li>Ensures that data and behavior are
 		<ul>
 			<li>Hash: only has built-in Ruby methods</li>
 			<li>Object: can define any useful methods you want</li>
 		</ul>
+	</li>
 </ol>
 
 <em>class example of creating an Apartment object</em>
