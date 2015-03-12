@@ -181,7 +181,7 @@ puts "Longitude: " + long.to_s
 
 <strong>Object Oriented Programming</strong> is a way of defining programs using <em>objects</em>. Just like methods allow us to reuse code, Objects allow us to create things that behave in similar ways to each other. Objects tie together related behaviors (methods) and data (variables) to match the way we think about things.
 
-<em>Class</em> is a "blueprint" for an object. It defines what an object will look like and how it will....
+<em>Class</em> is a "blueprint" for an object. It defines what an object will look like and how it will behave when it's created.
 
 Defining a class
 ```
@@ -213,18 +213,20 @@ eric.address = "123 Rock St. Oakland"
 puts eric.greet
 puts eric.address
 ```
+
+Why use objects?
 <ol>
-	<li>Why use objects?</li>
+	<li>Groups together related methods
 		<ul>
-			<li>Groups together related methods</li>
 			<li>Person: greet, share_address</li>
 			<li>String: upcase, downcase, split</li>
 			<li>Array: length, first, shuffle</li>
 		</ul>
+	</li>
 	<li>Ensure that data storage is consistent</li>
 		<ul>
 			<li>Hash: can have any key</li>
-			<li>Object: can only have specified attributes (defined using `attr_accessor`)</li>
+			<li>Object: can only have specified attributes (defined using <code>attr_accessor</code>)</li>
 		</ul>
 	<li>Ensures that data and behavior are </li>
 		<ul>
@@ -249,7 +251,6 @@ end
 
 oak_wood = Apartment.new('Oak Wood Apartments',2000,1500,2,1)
 ```
-
 
 
 
