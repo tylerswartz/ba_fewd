@@ -266,15 +266,27 @@ oak_wood = Apartment.new('Oak Wood Apartments',2000,1500,2,1)
 
 <em>Symbols</em> are used in places where you would use string literals. Use `{name: 'Bilbo'}` instead of `{'name' => 'Bilbo'}`.
 
-<em>Collections</em> are Arrays and Hashes. Arrays are for storing ordered lists of things. Hashes are for storing information about an individual thing.
+<em>Collections</em> are Arrays and Hashes. Arrays are for storing ordered lists of things. Hashes are for storing information about an individual thing. Hashes and Arrays can be mixed together to store lists of related data, such as an API.
 
-<em></em>
+<em>Iterations</em> - running a loop through a list of items.
+```
+names.each do |name|
+	puts name
+end
+```
+<em>Methods</em> are like math equations. They have a name and they take in parameters and return values. 
 
+<em>Class</em> is a "blueprint" for an object. It defines what an object will look like and how it will behave when it's created.
 
+<em>Objects</em> allow us to create things that behave in similar ways to each other. Objects tie together related behaviors (methods) and data (variables) to match the way we think about things.
 
+<em>attr_reader</em> (need to define the difference)
 
+<em>attr_accessor</em> (need to define the difference)
 
+<em>Attributes</em> are shortcuts for creating methods and their matching instance variables, which use @.
 
+HW: Mid-term project is due next Thursday (not tuesday)
 
 
 
