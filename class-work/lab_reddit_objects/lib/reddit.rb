@@ -28,7 +28,8 @@ class Reddit
       my_story = Story.new(title,ups,url,site)
       @stories << my_story
     end
-
+  end
+end
     
 
     # Story.new 
@@ -39,7 +40,5 @@ class Reddit
     #      story URL, and 'reddit.com' for the site argument
     #   4. Store a list Story objects into the stories attribute
     #   5. Return the list of story objects
-  end
-end
 
 
