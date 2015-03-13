@@ -11,7 +11,6 @@ class Building
 	def view_apartments
 		@apartments.each do |x|
 			puts "Name is #{@apartments[x].name}"
-			puts "Square Feet is #{@apartments[x].apt_sqft}"
 		end
 	end
 

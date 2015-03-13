@@ -254,11 +254,21 @@ end
 oak_wood = Apartment.new('Oak Wood Apartments',2000,1500,2,1)
 ```
 
+<em>3.12.15</em>
 
+<strong>Ruby Review</strong>
 
- 
+<em>Variables</em> - store data with an associated name.
 
+<em>Interpolation</em> is used to put a variable into a string. `str = "hello, #{name}"`. Note that its important to use double quotes when using interpolation, but not in other situations.
 
+<em>Boleans</em> are logic operators. `==, !=, >, <, <=, >=, .eql?`
+
+<em>Symbols</em> are used in places where you would use string literals. Use `{name: 'Bilbo'}` instead of `{'name' => 'Bilbo'}`.
+
+<em>Collections</em> are Arrays and Hashes. Arrays are for storing ordered lists of things. Hashes are for storing information about an individual thing.
+
+<em></em>
 
 
 
