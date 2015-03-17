@@ -2,11 +2,15 @@
 class SecretNumber
 	attr_accessor :secret
 
-	def initialize()
-		@secret
+	def initialize
+		@secret = rand(1..10)
 	end
 
-	def new_number
-		@secret = rand(1..10)
+	def number
+		puts @secret
+	end
+
+	def to_i
+		@secret
 	end
 end

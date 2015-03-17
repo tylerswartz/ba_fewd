@@ -7,6 +7,7 @@ class Player
 	end
 
 	def greet
-		puts "Hi #{@name}! Good luck. \n"
+		puts "Hi #{@name}! Good luck."
+		puts
 	end
 end

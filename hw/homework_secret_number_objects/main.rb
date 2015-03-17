@@ -74,6 +74,11 @@ puts "1. You get three tries to guess a secret number between 1 and 10."
 puts "2. I'll give you hints if you need to go higher or lower...so use some strategy."
 puts "3. That's it. Let's go."
 
+#start game
+secret = SecretNumber.new
+game1 = Game.new(secret,player)
+game1.play
+
 
 
 
