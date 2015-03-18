@@ -6,8 +6,8 @@ class Game
 	attr_accessor :number, :name, :guess
 
 	# start game with secret number
-	def initialize(number, name)
-		@number = number
+	def initialize(name)
+		@number = SecretNumber.new
 		@name = name
 		@num_guesses = 3
 	end
@@ -30,7 +30,7 @@ class Game
 
 			# check guess
 			if guess == @number.to_i
-				puts "Congrats, you won #{@name}!!! Nice job with the correct guess of #{@number}!"
+				puts "Congrats, you won #{@name.pname}!!! Nice job with the correct guess of #{@number.to_i}!"
 				exit
 			elsif guess > @number.to_i
 				puts "Close, but you are too high. You have #{@num_guesses} left."
@@ -39,6 +39,6 @@ class Game
 			end
 		end
 
-		puts "Game over."
+		puts "Game over #{name.pname}. The secret number was #{@number.to_i}."
 	end
 end

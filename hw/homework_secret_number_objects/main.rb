@@ -75,8 +75,8 @@ puts "2. I'll give you hints if you need to go higher or lower...so use some str
 puts "3. That's it. Let's go."
 
 #start game
-secret = SecretNumber.new
-game1 = Game.new(secret,player)
+# secret = SecretNumber.new
+game1 = Game.new(player)
 game1.play
 
 

@@ -5,7 +5,7 @@ class Reddit
   # TODO: This class should have an attribute called "stories".
   attr_accessor :stories
 
-  def initialize()
+  def initialize
     @stories = []
   end
 

@@ -16,8 +16,6 @@ require_relative 'lib/story'
 require_relative 'lib/reddit'
 require_relative 'lib/mashable'
 
-@stories = []
-
 reddit_stories = Reddit.new
 @stories = reddit_stories.fetch_stories
 

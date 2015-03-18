@@ -17,7 +17,7 @@ class Story
   end
 
   def headline
-  	# puts "#{@ups} -- #{@title} --  #{@site} -- #{@url}"
-  	puts "HEADLINE DATA, YAY"
+  	"#{@ups} -- #{@title} --  #{@site} -- #{@url}"
+  	# "HEADLINE DATA, YAY"
   end
 end

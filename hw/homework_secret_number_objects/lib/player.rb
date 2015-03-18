@@ -10,4 +10,8 @@ class Player
 		puts "Hi #{@name}! Good luck."
 		puts
 	end
+
+	def pname
+		@name
+	end
 end

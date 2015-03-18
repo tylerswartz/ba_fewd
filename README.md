@@ -280,15 +280,15 @@ end
 
 <em>Objects</em> allow us to create things that behave in similar ways to each other. Objects tie together related behaviors (methods) and data (variables) to match the way we think about things.
 
-<em>attr_reader</em> (need to define the difference)
+<em>attr_reader</em> only allows other objects to read a value.
 
-<em>attr_accessor</em> (need to define the difference)
+<em>attr_accessor</em> allows other objects to read and write a value.
 
 <em>Attributes</em> are shortcuts for creating methods and their matching instance variables, which use @.
 
-HW: Mid-term project is due next Thursday (not tuesday)
+HW: Mid-term project is due next Thursday (3/26)
 
-
+<em>3.17.15</em>
 
 
 
