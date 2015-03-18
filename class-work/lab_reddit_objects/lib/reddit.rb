@@ -1,5 +1,6 @@
 # HINT: You will have to add an initialize method!
-
+require 'json'
+require 'rest-client'
 
 class Reddit
   # TODO: This class should have an attribute called "stories".
@@ -11,11 +12,6 @@ class Reddit
 
   # HINT: Start here!
   def fetch_stories
-    # TODO: This should check if the stories already have been loaded,
-    # and if so, return them. Otherwise, it should load the stories from reddit:
-    # 1. It should load http://reddit.com/.json as JSON  
-    require 'json'
-    require 'rest-client'
 
     response = JSON.load(RestClient.get("http://reddit.com/.json"))
 
@@ -28,6 +24,7 @@ class Reddit
       my_story = Story.new(title,ups,url,site)
       @stories << my_story
     end
+     @stories
   end
 end
     

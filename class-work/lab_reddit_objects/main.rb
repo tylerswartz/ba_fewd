@@ -15,12 +15,14 @@
 require_relative 'lib/story'
 require_relative 'lib/reddit'
 require_relative 'lib/mashable'
+require 'pry'
 
 reddit_stories = Reddit.new
-@stories = reddit_stories.fetch_stories
+stories = reddit_stories.fetch_stories
 
-@stories.each do |story|
-	story.headline
+
+stories.each do |story|
+	puts story.headline
 end
 
 # TODO: Fetch the stories using the Reddit object

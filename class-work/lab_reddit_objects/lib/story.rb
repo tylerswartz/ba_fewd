@@ -18,6 +18,5 @@ class Story
 
   def headline
   	"#{@ups} -- #{@title} --  #{@site} -- #{@url}"
-  	# "HEADLINE DATA, YAY"
   end
 end
