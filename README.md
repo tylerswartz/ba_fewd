@@ -278,7 +278,9 @@ end
 
 <em>Class</em> is a "blueprint" for an object. It defines what an object will look like and how it will behave when it's created.
 
-<em>Objects</em> allow us to create things that behave in similar ways to each other. Objects tie together related behaviors (methods) and data (variables) to match the way we think about things.
+<em>Objects</em> allow us to create things that behave in similar ways to each other. Objects tie together related behaviors (methods) and data (variables) to match the way we think about things. Defining methods and attributes is how we create the Object's API. What is inside the object doesn't matter when you're using them, only the outside API matters.
+
+<em>Scope</em> determines how long variables and objects live for in object oriented programs.
 
 <em>attr_reader</em> only allows other objects to read a value.
 
@@ -286,9 +288,68 @@ end
 
 <em>Attributes</em> are shortcuts for creating methods and their matching instance variables, which use @.
 
+<em>APIs</em> allow you to read data form websites. Your own website can provide APIs to others. When designing a Class, you are creating an Object's API. When you create an application in Rails, you are creating a website API. 
+
 HW: Mid-term project is due next Thursday (3/26)
 
 <em>3.17.15</em>
+
+<strong>Ruby on Rails</strong>
+
+Why use it?
+<ul>
+	<li>Very rapid development time; no difference between prototypes and real sites code.</li>
+	<li>Designed to make security and databases easy and transparent to the developer.</li>
+	<li>Scalable; the same app you create right now on your command line can be used by millions.</li>
+	<li>Has been around for a very long time (10yrs) and is still getting better.</li>
+	<li>Uses Ruby, which means a great community with lots of open source libraries.</li>
+</ul>
+
+How it works:
+<ol>
+	<li>Request URL from website.</li>
+	<li>Send Request/Routes (API) to server, which direct to the Controller (the switchboard of the app).</li>
+	<li>Controller then uses logic of the Model to get data from Database.</li>
+	<li>Returns data and puts it together with the Views (HTML/CSS).</li>
+	<li>Responds to user with the rendered views & data.</li>
+</ol>
+
+To input ruby code into html you use special html tags
+```
+ <% @apartments.each do |apartment| %>
+ 	<h2>Apartment Name: <%= apartment.name %></h2>
+ <% end %>
+```
+`<% code %>` doesn't show on page. `<%= code %>` equals sign shows data on page.
+
+To start a rails app: 
+```
+rails new project_name
+cd project_name
+rails server
+```
+
+To create a new Controller: `rails generate controller Greeter`.
+
+File locations for Rail Projects
+<ul>
+	<li>All Routes are in config/routes.rb</li>
+	<li>Controller is in app/controllers/greeter_controller.rb</li>
+	<li>View is in app/views/greeter/hello.html.erb</li>
+	<li>CSS, JS, Images - app/assets</li>
+	<li><strong>Classes that respond to requests - app/controllers</strong></li>
+	<li>Utility modules with handy methods - app/helpers</li>
+	<li>Classes that define outbound emails - app/mailers</li>
+	<li><strong>Models are Classes (eg User, Comment, post) - app/models</strong></li>
+	<li><strong>Templates that controllers use to render HTML. - app/views</strong></li>
+	<li>Master templates to be used throughout your website - app/views/layouts</li>
+</ul>
+
+For additional info on Rails setup check out the Rails Guide, 'Getting Started with Rails'.
+
+
+
+
 
 
 
