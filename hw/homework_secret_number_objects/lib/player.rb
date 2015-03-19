@@ -2,8 +2,9 @@
 class Player
 	attr_accessor :name
 
-	def initialize(name)
-		@name = name
+	def initialize
+		puts "What is your name?"
+		@name = gets.chomp
 	end
 
 	def greet
@@ -11,7 +12,5 @@ class Player
 		puts
 	end
 
-	def pname
-		@name
-	end
 end
+

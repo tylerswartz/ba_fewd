@@ -41,15 +41,15 @@ require_relative 'lib/player'
 require_relative 'lib/secret_number'
 
 #game methods
-def new_player
-	name = ask_user "What is your name?"
-	Player.new(name)
-end
+# def new_player
+	
+# 	Player.new(name)
+# end
 
-def ask_user(question)
-  puts question
-  gets.strip
-end
+# def ask_user(question)
+#   puts question
+#   gets.strip
+# end
 
 
 
@@ -63,21 +63,21 @@ puts ".................. \n \n \n"
 
 # TODO: put code here ask the user for their name, and save it in a Player object.
 #Player Name
-player = new_player
-player.greet
+player1 = Player.new
+player1.greet
 
 
 # TODO: put code here to initialize a new Game object, and start it
 #Rules
-puts "Here is how this game works."
-puts "1. You get three tries to guess a secret number between 1 and 10."
-puts "2. I'll give you hints if you need to go higher or lower...so use some strategy."
-puts "3. That's it. Let's go."
+
 
 #start game
 # secret = SecretNumber.new
-game1 = Game.new(player)
-game1.play
+
+game1 = Game.new(player1)
+game1.start_game
+
+
 
 
 
