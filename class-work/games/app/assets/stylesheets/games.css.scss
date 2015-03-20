@@ -4,6 +4,20 @@ body {
 	text-align: center;
 	background-image: image-url("/images/games/CU0Ma3o.png"); 
 	color: #FAEBD7;
+	font-family: 'Indie Flower', cursive;
+}
+
+.all-games-link {
+	margin-right: 80%;
+  width: 185px;
+  background: #170700;
+  padding: 10px 5px 10px 5px;
+  border-radius: 16px;
+}
+
+.all-games-link a {
+	text-decoration: none;
+  color: #FAEBD7;
 }
 
 .game-center {
