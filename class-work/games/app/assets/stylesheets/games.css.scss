@@ -27,12 +27,16 @@ body {
 }
 
 .choose-hand {
-	text-align: center;
-	display: inline;
+	display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 .hand-container {
-	text-align: center;
+  width: 175px;
+  margin: 10px;
 }
 
 .hand-container img {
