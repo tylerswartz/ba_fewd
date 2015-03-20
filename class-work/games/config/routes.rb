@@ -1,4 +1,8 @@
 Games::Application.routes.draw do
+  get 'scrambles/new'
+
+  get 'scrambles/show'
+
   root 'games#index'
   
   resources 'games', only: [:index]
