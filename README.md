@@ -359,49 +359,49 @@ Rails uses "resources" to define a standard set of actions for HTTP verbs. The s
 	<tr>
 		<th>HTTP Verb</th>
 		<th>Path</th>
-		<th>Action</th>
+		<th><code>Action</code></th>
 		<th>Used For</th>
 	</tr>
 	<tr>
 		<td>GET</td>
 		<td>/books</td>
-		<td>index</td>
+		<td><code>index</code></td>
 		<td>display all books</td>
 	</tr>
 	<tr>
 		<td>GET</td>
 		<td>/books/new</td>
-		<td>new</td>
+		<td><code>new</code></td>
 		<td>return an HTML form for creating a new book</td>
 	</tr>
 	<tr>
 		<td>POST</td>
 		<td>/books</td>
-		<td>create</td>
+		<td><code>create</code></td>
 		<td>create a new book</td>
 	</tr>
 	<tr>
 		<td>GET</td>
 		<td>/books/:id</td>
-		<td>show</td>
+		<td><code>show</code></td>
 		<td>display a specific book</td>
 	</tr>
 	<tr>
 		<td>GET</td>
 		<td>/books/:id/edit</td>
-		<td>edit</td>
+		<td><code>edit</code></td>
 		<td>return an HTML form for editing a book</td>
 	</tr>
 	<tr>
 		<td>PUT</td>
 		<td>/books/:id</td>
-		<td>update</td>
+		<td><code>update</code></td>
 		<td>update a specific book</td>
 	</tr>
 	<tr>
 		<td>DELETE</td>
 		<td>/books/:id</td>
-		<td>destroy</td>
+		<td><code>destroy</code></td>
 		<td>delete a specific book</td>
 	</tr>
 </table>
