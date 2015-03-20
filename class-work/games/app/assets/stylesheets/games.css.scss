@@ -3,11 +3,18 @@
 body {
 	text-align: center;
 	background-image: image-url("/images/games/CU0Ma3o.png"); 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-	color: #648C99;
+	color: #FAEBD7;
+}
+
+.game-center {
+	background: rgba(0,0,0,0.6);
+  width: 610px;
+  height: 400px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px 15px 30px 15px;
+  border-radius: 40px;
 }
 
 .games img {
@@ -17,4 +24,8 @@ body {
 
 .games a {
 	display: inline;
+}
+
+.choose-hand img {
+	margin: 10px;
 }
