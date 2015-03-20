@@ -355,7 +355,56 @@ Browsers send some text to a web server. Big hash of data, but the important pie
 
 Rails uses "resources" to define a standard set of actions for HTTP verbs. The standard routes can be found in the class slides.
 
-...insert the slide of the standard actions.
+<table>
+	<tr>
+		<th>HTTP Verb</th>
+		<th>Path</th>
+		<th>Action</th>
+		<th>Used For</th>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td>/books</td>
+		<td>index</td>
+		<td>display all books</td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td>/books/new</td>
+		<td>new</td>
+		<td>return an HTML form for creating a new book</td>
+	</tr>
+	<tr>
+		<td>POST</td>
+		<td>/books</td>
+		<td>create</td>
+		<td>create a new book</td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td>/books/:id</td>
+		<td>show</td>
+		<td>display a specific book</td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td>/books/:id/edit</td>
+		<td>edit</td>
+		<td>return an HTML form for editing a book</td>
+	</tr>
+	<tr>
+		<td>PUT</td>
+		<td>/books/:id</td>
+		<td>update</td>
+		<td>update a specific book</td>
+	</tr>
+	<tr>
+		<td>DELETE</td>
+		<td>/books/:id</td>
+		<td>destroy</td>
+		<td>delete a specific book</td>
+	</tr>
+</table>
 
 <em>GET</em> - Gets information (i.e. visit the bookstore homepage, get a list of all books).
 
@@ -368,11 +417,33 @@ Rails uses "resources" to define a standard set of actions for HTTP verbs. The s
 MVC Architecture (Model, View, Controller):
 <ul>
 	<li>Software architecture pattern.</li>
-	<li>Model - representation...</li>
-	<li>need from slides...</li>
-	<li>...</li>
-	<li>...</li>
+	<li>Model - representation of your data (users, books, etc...)</li>
+	<li>View - the way we present this data to our users (HTML, JSON, XML, plain text)</li>
+	<li>Controller - receive user commands, interpret them, and pass them onto the appropriate part of the application.</li>
 </ul>
+
+<strong>Controllers</strong>. When a <em>route</em> is matched, it invokes an <em>action</em> in a <em>Controller</em> class by calling its corresponding <em>method</em>. Conventional actions: index, show, new, edit, create, update, destroy. It also reads in the browser parameters (called a <em>request</em>) and turns that into something your code can use.
+
+<strong>Views</strong> are usually the same name as a controller action, `def show`. Views can be a mix of HTML and Ruby, using ERB:
+```
+<% @games.each do |game| %>
+	<p class="game"><%= game %></p>
+<% end %>
+```
+
+There are two kinds of ERB blocks. `<% "not printed" %>` and `<%= "printed" %>`. This is because everything has a return value in Ruby.
+
+<strong>View Layouts</strong> (application.html.erb).
+<ul>
+	<li>All views are wrapped inside application.html.erb</li>
+	<li>This is a layout, in the app/views/layouts directory.</li>
+	<li>It is shared between all views.</li>
+	<li>Used to set up your css, javascript, page title, etc.</li>
+	<li>In the controller, you can specify a different layout.</li>
+	<li>You can make your own custom layouts.</li>
+</ul>
+
+<strong>View Partials</strong> are 'pieces' of views that you can share between views. They are regular views, except they're rendered by other views instead of controllers. Partials always start with an underscore. When you reference them in rails, though, you don't use _.
 
 *Model names should be singular, Controller names should be plural.
 
