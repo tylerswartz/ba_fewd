@@ -5,7 +5,16 @@
 <div class="game-center">
 	<%= render @outcome_partial %>
 	
-	<h4>The robots throw was 
+	<h2>You threw 
+		<% if @player_throw == 0 %>
+			Rock
+		<% elsif @player_throw == 1 %>
+			Paper
+		<% else %>
+			Scissors
+		<% end %>
+
+	and the robot threw 
 		<% if @robot_throw == 0 %>
 			Rock
 		<% elsif @robot_throw == 1 %>
@@ -13,7 +22,7 @@
 		<% else %>
 			Scissors
 		<% end %>
-	</h4>
+	</h2>
 	
 	<h3><%= link_to "PLAY AGAIN", new_rock_paper_path %></h3>
 </div>
