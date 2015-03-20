@@ -23,7 +23,7 @@ body {
 .game-center {
 	background: rgba(0,0,0,0.6);
   width: 610px;
-  height: 400px;
+  height: 500px;
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
@@ -61,3 +61,21 @@ body {
 	text-decoration: none;
 	color: #FAEBD7;
 }
+
+.win-lose-gif {
+	max-width: 300px;
+}
+
+.play-again {
+	background: #FAEBD7;
+  width: 125px;
+  margin: auto;
+  padding: 10px 5px 10px 5px;
+  border-radius: 16px;
+}
+
+.play-again a {
+	text-decoration: none;
+  color: #000;
+}
+

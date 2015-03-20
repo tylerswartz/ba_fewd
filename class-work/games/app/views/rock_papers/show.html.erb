@@ -10,7 +10,7 @@
 			Rock
 		<% elsif @player_throw == 1 %>
 			Paper
-		<% else %>
+		<% elsif @player_throw == 2 %>
 			Scissors
 		<% end %>
 
@@ -19,10 +19,10 @@
 			Rock
 		<% elsif @robot_throw == 1 %>
 			Paper
-		<% else %>
+		<% elsif @robot_throw == 2 %>
 			Scissors
 		<% end %>
 	</h2>
 	
-	<h3><%= link_to "PLAY AGAIN", new_rock_paper_path %></h3>
+	<h3 class="play-again"><%= link_to "PLAY AGAIN", new_rock_paper_path %></h3>
 </div>

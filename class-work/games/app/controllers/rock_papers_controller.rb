@@ -10,20 +10,14 @@ class RockPapersController < ApplicationController
   end
 
   def compare_hands(player,robot)
-  	if player == robot
+  	case[player,robot]
+      when [0,0],[1,1],[2,2]
   		@outcome_partial = 'tie' 
-  	elsif player = 0 && robot = 1
+  	 when [0,1],[2,0],[1,2]
   		@outcome_partial = 'lose'
-  	elsif player = 0 && robot = 2
-  		@outcome_partial = 'win'
-  	elsif player = 1 && robot = 0
-  		@outcome_partial = 'win'
-  	elsif player = 1 && robot = 2
-  		@outcome_partial = 'lose'
-  	elsif player = 2 && robot = 0
-  		@outcome_partial = 'lose'  	
-  	elsif player = 2 && robot = 1
-  		@outcome_partial = 'win'  	  		  	
-  	end
+    else
+      @outcome_partial = 'win'
+    end
   end
 end
+
