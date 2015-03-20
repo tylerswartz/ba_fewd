@@ -26,11 +26,20 @@ body {
 	display: inline;
 }
 
-.choose-hand img {
+.choose-hand {
+	text-align: center;
+	display: inline;
+}
+
+.hand-container {
+	text-align: center;
+}
+
+.hand-container img {
 	margin: 10px;
 }
 
-.choose-hand a {
+.hand-container a {
 	text-decoration: none;
 	color: #FAEBD7;
 }
