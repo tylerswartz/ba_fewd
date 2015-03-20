@@ -1,3 +1,20 @@
 // Place all the styles related to the Games controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	text-align: center;
+	background-image: url("../../../../public/images/games/CU0Ma3o.png"); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	color: #648C99;
+}
+
+.games img {
+	border: 1px solid black;
+	margin: 10px;
+}
+
+.games a {
+	display: inline;
+}

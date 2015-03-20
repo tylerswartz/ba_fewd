@@ -7,22 +7,23 @@ class RockPapersController < ApplicationController
     @robot_throw = rand(0..2)
 
     compare_hands(@player_throw,@robot_throw)
-
-
-    if @player_won
-      @outcome_partial = 'win'
-    else
-      @outcome_partial = 'lose'
-    end
   end
 
   def compare_hands(player,robot)
   	if player == robot
-  		#outcome_partial = 'tie'.
-  		#need to create a tie partial. 
+  		@outcome_partial = 'tie' 
   	elsif player = 0 && robot = 1
-  		#@outcome_partial = 'win'
+  		@outcome_partial = 'lose'
+  	elsif player = 0 && robot = 2
+  		@outcome_partial = 'win'
+  	elsif player = 1 && robot = 0
+  		@outcome_partial = 'win'
+  	elsif player = 1 && robot = 2
+  		@outcome_partial = 'lose'
+  	elsif player = 2 && robot = 0
+  		@outcome_partial = 'lose'  	
+  	elsif player = 2 && robot = 1
+  		@outcome_partial = 'win'  	  		  	
   	end
-
   end
 end
