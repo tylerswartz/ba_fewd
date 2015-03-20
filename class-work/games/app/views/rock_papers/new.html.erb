@@ -2,9 +2,9 @@
 	<h1>Rock Paper Scissors!</h1>
 	<h3>To play this game pick a throw:</h3>
 	<div class="choose-hand">
-	    <%= link_to image_tag("rock_paper/rock.jpeg"), rock_paper_path(0) %>
-	    <%= link_to image_tag("rock_paper/paper.jpeg"), rock_paper_path(1) %>
-	    <%= link_to image_tag("rock_paper/scissors.jpeg"), rock_paper_path(2) %>
+	    <%= link_to image_tag("rock_paper/rock.jpeg", :class=> "hand-img") + 'ROCK', rock_paper_path(0) %>
+	    <%= link_to image_tag("rock_paper/paper.jpeg", :class=> "hand-img") + 'PAPER', rock_paper_path(1) %>
+	    <%= link_to image_tag("rock_paper/scissors.jpeg", :class=> "hand-img") + 'SCISSORS', rock_paper_path(2) %>
 	</div>
 </div>
 
