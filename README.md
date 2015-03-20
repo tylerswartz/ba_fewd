@@ -359,7 +359,7 @@ Rails uses "resources" to define a standard set of actions for HTTP verbs. The s
 	<tr>
 		<th>HTTP Verb</th>
 		<th>Path</th>
-		<th><code>Action</code></th>
+		<th>Action</th>
 		<th>Used For</th>
 	</tr>
 	<tr>
