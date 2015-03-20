@@ -1,0 +1,13 @@
+<%= render @outcome_partial %>
+
+<h4>The robots throw was 
+	<% if @robot_throw == 0 %>
+		Rock
+	<% elsif @robot_throw == 1 %>
+		Paper
+	<% else %>
+		Scissors
+	<% end %>
+</h4>
+
+<h3><%= link_to "PLAY AGAIN", new_rock_paper_path %></h3>

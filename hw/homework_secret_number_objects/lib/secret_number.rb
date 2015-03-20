@@ -6,11 +6,7 @@ class SecretNumber
 		@secret = rand(1..10)
 	end
 
-	def number
-		puts @secret
-	end
 
-	def to_i
-		@secret
-	end
 end
+
+

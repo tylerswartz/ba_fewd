@@ -41,7 +41,7 @@ class Game
 			end
 
 			# increment guess count
-			@num_guesses = @num_guesses - 1
+			# @num_guesses = @num_guesses - 1
 
 			# check guess
 			if guess == @number

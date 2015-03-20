@@ -347,14 +347,54 @@ File locations for Rail Projects
 
 For additional info on Rails setup check out the Rails Guide, 'Getting Started with Rails'.
 
+<em>3.19.15</em>
 
+<strong>Routes</strong>
 
+Browsers send some text to a web server. Big hash of data, but the important piece is the type of request (get/post/put) and the URL associated with that request.
 
+Rails uses "resources" to define a standard set of actions for HTTP verbs. The standard routes can be found in the class slides.
 
+...insert the slide of the standard actions.
 
+<em>GET</em> - Gets information (i.e. visit the bookstore homepage, get a list of all books).
 
+<em>POST</em> - Create something (i.e. create a new book in the bookstore).
 
+<em>PUT/PATCH</em> - Update an object (i.e. update the book).
 
+<em>DESTROY</em> - Delete an object.
+
+MVC Architecture (Model, View, Controller):
+<ul>
+	<li>Software architecture pattern.</li>
+	<li>Model - representation...</li>
+	<li>need from slides...</li>
+	<li>...</li>
+	<li>...</li>
+</ul>
+
+*Model names should be singular, Controller names should be plural.
+
+<strong>Command Line for starting new Rails app</strong>
+```
+rails new games
+cd games
+git init
+git add .
+gst  #fancy way of saying git status
+git commit -m"first commit"
+rails generate controller games index
+rails generate controller SecretNumber new show
+```
+
+Other useful commands
+```
+rails s 	#starts server
+rake routes  #gives you list of the routes
+```
+
+Instead of `<a href="#"> link</a>`  use `<%= link_to 'link', new_secret_number_path %>`. Here you are using the prefix from the routes (shown with `rake routes`) instead of a url path.
 
 
 
