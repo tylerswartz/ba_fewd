@@ -11,12 +11,11 @@
 		<h1><%= @scrambled_word %></h1>
 	</div>
 	<div class="scramble-form">
-		<form action="#" method="POST">
-			<input type="text" name="guess">
-			<input type="hidden" name="correct-answer" value="<%= @random_word %>">
-			<br>
-			<input type="submit" value="Guess!">
-		</form>
+		<%= form_tag("/show", method: "get") do %>
+  		<%= text_field_tag(:guess) %>
+  		<%= hidden_field_tag(:correct_answer, @random_word) %>
+  		<%= submit_tag("Guess!") %>
+		<% end %>
 	</div>
 
 </div>
