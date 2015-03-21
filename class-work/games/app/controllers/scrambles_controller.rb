@@ -11,13 +11,13 @@ class ScramblesController < ApplicationController
   end
 
   def show
-  	require 'cgi'
+		guess = params[:guess]
+		word = params[:word]
 
-  	CGI::parse(URI::parse(url).query)
-		# CGI::parse('param1=value1&param2=value2&param3=value3')
-
-
-  	@outcome_partial = 'win'
-  	@outcome_partial = 'lose'
+		if guess == word
+			@outcome_partial = 'win'
+		else
+			@outcome_partial = 'lose'
+		end	
   end
 end

@@ -13,7 +13,7 @@
 	<div class="scramble-form">
 		<%= form_tag("/scrambles/1", method: "get") do %>
   		<%= text_field_tag(:guess) %>
-  		<%= hidden_field_tag(:correct_answer, @random_word) %>
+  		<%= hidden_field_tag(:word, @random_word) %>
   		<%= submit_tag("Guess!") %>
 		<% end %>
 	</div>
