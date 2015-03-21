@@ -11,7 +11,7 @@
 		<h1><%= @scrambled_word %></h1>
 	</div>
 	<div class="scramble-form">
-		<%= form_tag("/show", method: "get") do %>
+		<%= form_tag("/scrambles/1", method: "get") do %>
   		<%= text_field_tag(:guess) %>
   		<%= hidden_field_tag(:correct_answer, @random_word) %>
   		<%= submit_tag("Guess!") %>

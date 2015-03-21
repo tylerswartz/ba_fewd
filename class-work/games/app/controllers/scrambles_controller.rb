@@ -8,18 +8,10 @@ class ScramblesController < ApplicationController
 		end
 
 		@scrambled_word	= string_shuffle(@random_word)
-
-   	
-
-
   end
 
   def show
+  	@outcome_partial = 'win'
+  	@outcome_partial = 'lose'
   end
-
-  def fetch_word
-
-  end
-
-
 end
