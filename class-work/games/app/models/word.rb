@@ -5,12 +5,6 @@ class Word
     self.name = name
   end
   
-  # def definitions
-  #   Wordnik.word.get_definitions(self.name)
-  # end
-
-  # Get one or many random words
-  # Word.random(:limit => 10)
   # Word.random
   def self.random(options={})
 

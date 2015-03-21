@@ -8,12 +8,12 @@
 	</div>
 	<div class="scramble-word">
 		<h2>Unscramble this word:</h2>
-		<h1><%= @random_word %></h1>
+		<h1><%= @scrambled_word %></h1>
 	</div>
 	<div class="scramble-form">
 		<form action="#" method="POST">
 			<input type="text" name="guess">
-			<input type="hidden" name="correct-answer" value="">
+			<input type="hidden" name="correct-answer" value="<%= @random_word %>">
 			<br>
 			<input type="submit" value="Guess!">
 		</form>
