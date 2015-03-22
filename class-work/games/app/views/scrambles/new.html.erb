@@ -7,13 +7,12 @@
 		<h3>To play this game unscramble the letters below to form a proper word.</h3>
 	</div>
 	<div class="scramble-word">
-		<h2>Unscramble this word:</h2>
-		<h1><%= @scrambled_word %></h1>
+		<h1><%= @scrambled_word.upcase %></h1>
 	</div>
 	<div class="scramble-form">
 		<%= form_tag("/scrambles/1", method: "get") do %>
-  		<%= text_field_tag(:guess) %>
-  		<%= hidden_field_tag(:word, @random_word) %>
+			<%= text_field_tag :guess, nil, :autocomplete => 'off' %>	
+  		<%= hidden_field_tag :word, @random_word %>
   		<%= submit_tag("Guess!") %>
 		<% end %>
 	</div>

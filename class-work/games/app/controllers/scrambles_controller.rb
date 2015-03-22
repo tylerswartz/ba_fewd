@@ -11,10 +11,10 @@ class ScramblesController < ApplicationController
   end
 
   def show
-		guess = params[:guess]
-		word = params[:word]
+		@guess = params[:guess]
+		@word = params[:word]
 
-		if guess == word
+		if @guess.upcase == @word.upcase
 			@outcome_partial = 'win'
 		else
 			@outcome_partial = 'lose'
