@@ -1,0 +1,8 @@
+<h1>Yelp API test</h1>
+<p>Based on the zipcode entered below Yelp will return 10 bars in the area and have one randomly selected as the 'highlighted' bar.</p>
+
+<%= form_tag("/apis/1", method: "get") do %>
+	<%= label_tag(:zipcode, "Zipcode:") %>
+	<%= text_field_tag :zipcode, nil, :autocomplete => 'off' %>	
+  <%= submit_tag("Go!") %>
+<% end %>
