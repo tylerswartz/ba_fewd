@@ -467,6 +467,29 @@ rake routes  #gives you list of the routes
 
 Instead of `<a href="#"> link</a>`  use `<%= link_to 'link', new_secret_number_path %>`. Here you are using the prefix from the routes (shown with `rake routes`) instead of a url path.
 
+<em>3.24.15</em>
+
+<strong>Rails: Models</strong>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
