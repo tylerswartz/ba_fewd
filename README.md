@@ -472,10 +472,30 @@ Instead of `<a href="#"> link</a>`  use `<%= link_to 'link', new_secret_number_p
 <strong>Rails: Models</strong>
 
 
+Command to generate a model
+```
+rails generate model Animal name:strong size:string weight:integer
+rails console
+```
 
+Good habit, in gemfile its important to add:
+```
+group: development do
+	gem 'pry'
+	gem 'pry-rails'
+end
+```
+Then run `gem bundle`. This give you the ability to debug with pry when you use the command `rails console`. If you are curious what methods a model has run `rails console` then call `ls` on the model (`ls Animal`). AcivteRecord::Querying#methods are the most common of the list to use.
 
+Everytime you create a model and update the fields of the model you need to  migrate the database which basiaclly updates it. Use `rake db:migrate`. (look into this more.....)
 
-
+```
+Animal.all #prints out all animals in database
+Animal.where(color:'brown') #returns all animals that are brown
+Animal.find(1) # returns the first id animal in the form of an array
+Animal.create name:'Possum', size: 'small', color: 'grey', weight: 100
+magic_animals = Animal.where(breed: 'magic') #finds all animals that have a breed of magic and then add it into a new array called magic_animals
+```
 
 
 
