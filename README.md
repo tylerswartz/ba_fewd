@@ -471,6 +471,7 @@ Instead of `<a href="#"> link</a>`  use `<%= link_to 'link', new_secret_number_p
 
 <strong>Rails: Models</strong>
 
+![Alt text](/rails-requests.png)
 
 Command to generate a model
 ```
