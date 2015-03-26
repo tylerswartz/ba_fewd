@@ -469,15 +469,60 @@ Instead of `<a href="#"> link</a>`  use `<%= link_to 'link', new_secret_number_p
 
 <em>3.24.15</em>
 
-<strong>Rails: Models</strong>
+<strong>Rails Models</strong>
 
 ![Alt text](/rails-requests.png)
 
-Command to generate a model
+<strong>Models</strong> are responsible for: managing the database table, providing methods to access data, and application logic (aka business logic).
+
+Models in rails' MVC structure help simplify working with databases. They correspond to an individual table and they contain most of your application code. "Skinny controllers, fat models".
+
+<strong>Databases</strong> permanently stores data, handle tons of data at big scales and are not easy to use. But, rails makes it easier. Most databases store their data in tables. Each table is made up of <em>records</em> (rows) and <em>columns</em>.
+
+Database Data Types:
+<ul>
+	<li>string</li>
+	<li>text</li>
+	<li>integer</li>
+	<li>boolean</li>
+	<li>float/decimal</li>
+	<li>date and time</li>	
+</ul>
+
+<em>Plurality</em>: Models are always singular, Tables and Controllers are always plural.
+
+Database CRUD is an acronym for the basic database operations: <em>C</em>reate, <em>R</em>ead, <em>U</em>pdate, <em>D</em>estroy.
+
+```
+# Create
+Animal.create name: 'Giraffe', description: 'has a realllly long neck.'
+
+# Read
+giraffe = Animal.where name: 'Pokeshirt'
+
+# Update
+giraffe.update name: 'Baby Giraffe'
+
+# Destroy
+giraffe.destroy
+```
+
+Command to generate a model:
 ```
 rails generate model Animal name:strong size:string weight:integer
-rails console
 ```
+
+This is what it looks like when it creates a model:
+```
+invoke  active_record
+    create    db/migrate/20140411150725_create_animals.rb
+    create    app/models/animal.rb
+    invoke    test_unit
+    create      test/models/animal_test.rb
+    create      test/fixtures/animals.yml
+```
+
+
 
 Good habit, in gemfile its important to add:
 ```
@@ -488,8 +533,25 @@ end
 ```
 Then run `gem bundle`. This give you the ability to debug with pry when you use the command `rails console`. If you are curious what methods a model has run `rails console` then call `ls` on the model (`ls Animal`). AcivteRecord::Querying#methods are the most common of the list to use.
 
-Everytime you create a model and update the fields of the model you need to  migrate the database which basiaclly updates it. Use `rake db:migrate`. (look into this more.....)
+<strong>Migration</strong> safely changes the structure of your database. It's used to add/remove tables, add/remove columns from tables, modify columns in a table, and add a column index for fast search. Migrations are NOT used to change data.
 
+Everytime you create a model and update the fields of the model you need to  migrate the database which basically updates it. Use `rake db:migrate`.
+
+<strong>Seeds</strong> are used in your database to have 'default data'. A common need is a list of countries in the world. We use seeds to fill our database with default data. Add the data to the seeds.rb file and then run `rake db:seed`.
+
+Code to use models in controllers:
+```
+class ShirtsController < ActiveController::Base
+  def index
+    @shirts = Shirt.all
+  end
+  def show
+    @shirt = Shirt.find(params[:id])
+  end
+end
+```
+
+Commands to interact with model and database:
 ```
 Animal.all #prints out all animals in database
 Animal.where(color:'brown') #returns all animals that are brown
