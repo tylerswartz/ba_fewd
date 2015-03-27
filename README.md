@@ -582,6 +582,27 @@ This form is to search the movies. *`GET` method is typically used just for form
 <% end %>	
 ```
 
+<em>Validations and Creations</em>
+
+(fill in common validations from notes....)
+
+In the Movie controller we add the line at the top: `validates :title, presence: true`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

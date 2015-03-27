@@ -31,10 +31,14 @@ body {
 	color: #FF0000;
 }
 
-.table-container {
+.main-container {
 	background: #E1E1E1;
 	padding: 1px;
 	padding-bottom: 50px;
+}
+
+.search-form {
+	padding: 20px;
 }
 
 .table, th, td {
