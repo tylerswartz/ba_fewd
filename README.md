@@ -537,6 +537,8 @@ Then run `gem bundle`. This give you the ability to debug with pry when you use 
 
 Everytime you create a model and update the fields of the model you need to  migrate the database which basically updates it. Use `rake db:migrate`.
 
+To find other commands that Rake does run `rake -T`.
+
 <strong>Seeds</strong> are used in your database to have 'default data'. A common need is a list of countries in the world. We use seeds to fill our database with default data. Add the data to the seeds.rb file and then run `rake db:seed`.
 
 Code to use models in controllers:
@@ -560,8 +562,13 @@ Animal.create name:'Possum', size: 'small', color: 'grey', weight: 100
 magic_animals = Animal.where(breed: 'magic') #finds all animals that have a breed of magic and then add it into a new array called magic_animals
 ```
 
+<em>3.26.15</em>
 
+<strong>Forms</strong>
 
+(fill in from slides....
+
+Steps to create a form in the movies app.
 
 
 
