@@ -4,6 +4,13 @@
 		<h3>See our collection of movies below</h3>
 	</div>
 </div>
+<div class="search-form">
+	<%= form_tag movies_path, method: 'GET' do%>
+		<%= text_field_tag :q, params[:q] %>
+		<%= submit_tag 'Search' %>
+	<% end %>	
+</div>
+
 <div class="table-container">
 	<table class="table">
 		<tr>

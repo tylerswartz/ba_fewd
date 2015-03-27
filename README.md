@@ -533,6 +533,8 @@ end
 ```
 Then run `gem bundle`. This give you the ability to debug with pry when you use the command `rails console`. If you are curious what methods a model has run `rails console` then call `ls` on the model (`ls Animal`). AcivteRecord::Querying#methods are the most common of the list to use.
 
+Once you get a list of methods for something you can get the documentation in pry by doing `? Animal.all` and it will tell you what `.all` does. 
+
 <strong>Migration</strong> safely changes the structure of your database. It's used to add/remove tables, add/remove columns from tables, modify columns in a table, and add a column index for fast search. Migrations are NOT used to change data.
 
 Everytime you create a model and update the fields of the model you need to  migrate the database which basically updates it. Use `rake db:migrate`.
@@ -569,7 +571,16 @@ magic_animals = Animal.where(breed: 'magic') #finds all animals that have a bree
 (fill in from slides....
 
 Steps to create a form in the movies app.
+Use the `form_tag` to create the form.
+Find the path from `rake routes`.
 
+This form is to search the movies. *`GET` method is typically used just for forms that search. `POST` would be a more typical form method.
+```
+<%= form_tag movies_path, method: 'GET' do%>
+	<%= text_field_tag :q, params[:q] %>
+	<%= submit_tag 'Search' %>
+<% end %>	
+```
 
 
 
