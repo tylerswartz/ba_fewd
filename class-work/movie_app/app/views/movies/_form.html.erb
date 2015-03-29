@@ -1,10 +1,13 @@
+<%= form_for(@movie) do |f|%>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
 
-<%= form_for @movie, url: {action: "create"} do |f|%>
-  <%= f.label_tag(:title, "Title:") %>
-  <%= f.text_field_tag :title, params[:title] %>
-  <%= f.label_tag(:year_released, "Year Released:") %>
-  <%= f.text_field_tag :year_released, params[:year_released] %>
-  <%= f.label_tag(:description, "Description:") %>
-  <%= f.text_field_tag :description, params[:description] %>
-  <%= f.submit_tag 'Add Movie!' %>
+  <%= f.label :year_released %>
+  <%= f.text_field :year_released %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.submit "Add Movie", class: "btn-primary"%>
 <% end %> 
+
