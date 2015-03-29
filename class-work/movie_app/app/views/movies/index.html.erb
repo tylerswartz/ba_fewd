@@ -6,6 +6,9 @@
 </div>
 
 <div class="main-container">
+	<div class="add-btn">
+		<%= link_to '<button type="button">Add a Movie</button>'.html_safe, new_movie_path %>
+	</div>
 	<div class="search-form">
 		<%= form_tag movies_path, method: 'GET' do%>
 			<%= text_field_tag :q, params[:q] %>
