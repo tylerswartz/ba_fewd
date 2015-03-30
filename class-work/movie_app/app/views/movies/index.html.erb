@@ -22,10 +22,11 @@
 			<th>Synopsis</th>
 		</tr>
 		<% @movies.each do |movie| %>
-			<tr>
+			<tr class="movie-row">
 				<td><%= movie.title %></td>
 				<td><%= movie.year_released %></td>
 				<td><%= movie.description %></td>
+				<td><%= link_to 'Delete', movie, method: :delete %></td>
 			</tr>
 		<% end %>
 	</table>
