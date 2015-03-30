@@ -19,12 +19,18 @@ class MoviesController < ApplicationController
 
   # POST /movies
   def create
-    @movie = Movie.new(params[:movie])    # Not the final implementation!
+    @movie = Movie.new(movie_params)    # Not the final implementation!
     if @movie.save
-      # Handle a successful save.
+      redirect_to root_path
     else
       render 'new'
     end
   end
 
+
+  private
+
+    def movie_params
+      params.require(:movie).permit(:title, :year_released, :description)
+    end
 end
