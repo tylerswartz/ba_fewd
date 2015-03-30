@@ -1,13 +1,13 @@
 <%= form_for(@movie) do |f|%>
   <%= render 'shared/error_messages' %>
 
-  <%= f.label :title %>
+  <%= f.label :title %><br>
   <%= f.text_field :title, class: 'form-control'%>
 
-  <%= f.label :year_released %>
+  <%= f.label :year_released %><br>
   <%= f.text_field :year_released, class: 'form-control' %>
 
-  <%= f.label :description %>
+  <%= f.label :description %><br>
   <%= f.text_field :description, class: 'form-control' %>
 
   <%= f.submit "Add Movie", class: "btn-primary"%>

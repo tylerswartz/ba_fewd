@@ -95,10 +95,17 @@ body {
 
 /*Forms*/
 
-.form-control {
+.search-add .form-control {
 	margin-top: 15px;
 	font-size: 20px;
 }
+
+.add-form .form-control {
+	width: 50%;
+	font-size: 20px;
+}
+
+
 
 #error_explanation {
   color: red;
