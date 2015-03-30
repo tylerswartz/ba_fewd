@@ -37,17 +37,30 @@ body {
 	padding-bottom: 50px;
 }
 
+.search-add {
+	padding: 20px;
+}
+
 .add-btn {
-	padding: 20px 0 0 20px;
+	color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  font-size: 18px;
+  line-height: 30px;
+  border-radius: 6px;
+  white-space: nowrap;
+  display: inline-block;
+  cursor: pointer;
 }
 
 .search-form {
 	padding: 20px;
 }
 
-.form-control {
-	font-size: 20px;
-}
+
 
 .table, th, td {
 	border: 2px solid #FF0000;
@@ -82,6 +95,10 @@ body {
 
 /*Forms*/
 
+.form-control {
+	margin-top: 15px;
+	font-size: 20px;
+}
 
 #error_explanation {
   color: red;

@@ -6,10 +6,8 @@
 </div>
 
 <div class="main-container">
-	<div class="add-btn">
-		<%= link_to '<button type="button">Add a Movie</button>'.html_safe, new_movie_path %>
-	</div>
-	<div class="search-form">
+	<div class="search-add">
+		<%= link_to '<button type="button" class="add-btn">Add Movie</button>'.html_safe, new_movie_path %>
 		<%= form_tag movies_path, method: 'GET' do%>
 			<%= text_field_tag :q, params[:q], placeholder: 'Search Movies', class: 'form-control', autocomplete: 'off' %>
 		<% end %>	
@@ -19,6 +17,7 @@
 			<th>Title</th>
 			<th>Year</th>
 			<th>Synopsis</th>
+			<th>Remove</th>
 		</tr>
 		<% @movies.each do |movie| %>
 			<tr class="movie-row">
