@@ -37,8 +37,16 @@ body {
 	padding-bottom: 50px;
 }
 
+.add-btn {
+	padding: 20px 0 0 20px;
+}
+
 .search-form {
 	padding: 20px;
+}
+
+.form-control {
+	font-size: 20px;
 }
 
 .table, th, td {
@@ -49,7 +57,7 @@ body {
 .table {
 	text-align: left;
 	margin: auto;
-	margin-top: 50px;
+	margin-top: 10px;
 }
 
 .table th {

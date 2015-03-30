@@ -11,8 +11,7 @@
 	</div>
 	<div class="search-form">
 		<%= form_tag movies_path, method: 'GET' do%>
-			<%= text_field_tag :q, params[:q] %>
-			<%= submit_tag 'Search' %>
+			<%= text_field_tag :q, params[:q], placeholder: 'Search Movies', class: 'form-control', autocomplete: 'off' %>
 		<% end %>	
 	</div>
 	<table class="table">
