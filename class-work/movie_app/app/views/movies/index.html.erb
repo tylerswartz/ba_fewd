@@ -10,6 +10,9 @@
 		<%= link_to '<button type="button" class="add-btn">Add Movie</button>'.html_safe, new_movie_path %>
 		<%= form_tag movies_path, method: 'GET' do%>
 			<%= text_field_tag :q, params[:q], placeholder: 'Search Movies', class: 'form-control', autocomplete: 'off' %>
+		<% end %>
+		<% if params[:q].present? %>
+			<%= link_to '<button type="button" class="add-btn all-movies">Return To Movies</button>'.html_safe, root_path %>
 		<% end %>	
 	</div>
 	<table class="table">

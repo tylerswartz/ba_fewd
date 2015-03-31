@@ -56,6 +56,10 @@ body {
   cursor: pointer;
 }
 
+.all-movies {
+	margin-top: 15px;
+}
+
 .search-form {
 	padding: 20px;
 }
