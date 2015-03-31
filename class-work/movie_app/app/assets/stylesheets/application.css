@@ -36,6 +36,12 @@ html, body {
 	padding-bottom: 50px;
 }
 
+.form-container {
+	background: #E1E1E1;
+	width: 100%;
+	height: calc(100% - 132px);
+}
+
 .search-add {
 	padding: 20px;
 }
@@ -104,11 +110,17 @@ html, body {
 }
 
 .add-form .form-control {
-	width: 50%;
+	width: 100%;
 	font-size: 20px;
+	margin-bottom: 25px;
+	display: block;
 }
 
-
+.add-form {
+	width: 250px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
 
 #error_explanation {
   color: red;
@@ -119,8 +131,21 @@ html, body {
 }
 
 .field_with_errors {
-  @extend .has-error;
-  .form-control {
-    color: $state-danger-text;
-  }
+  color: red
 }
+
+.field_with_errors input {
+	border: 3px solid red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
