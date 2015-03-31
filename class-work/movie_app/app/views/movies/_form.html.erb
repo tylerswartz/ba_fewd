@@ -11,5 +11,7 @@
   <%= f.text_field :description, class: 'form-control', autocomplete: 'off' %>
 
   <%= f.submit "Add Movie", class: "add-btn"%>
+
+  <%= link_to '<button type="button" class="add-btn all-movies">Return To Movies</button>'.html_safe, root_path %>
 <% end %> 
 
