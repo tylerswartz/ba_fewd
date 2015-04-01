@@ -1,2 +1,9 @@
 <h1>Urls#new</h1>
 <p>Find me in app/views/urls/new.html.erb</p>
+
+
+<%= form_for(@url) do |f|%>
+  <%= f.label 'Your Link', class: 'label' %>
+  <%= f.text_field :link, class: 'form-control', autocomplete: 'off'%>
+  <%= f.submit "Shorten!"%>
+<% end %> 

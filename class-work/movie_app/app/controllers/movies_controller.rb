@@ -19,7 +19,7 @@ class MoviesController < ApplicationController
 
   # POST /movies
   def create
-    @movie = Movie.new(movie_params)    # Not the final implementation!
+    @movie = Movie.new(movie_params)    
     if @movie.save
       redirect_to root_path
     else

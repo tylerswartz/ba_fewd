@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20150401015715) do
 
   create_table "urls", force: :cascade do |t|
     t.string   "link"
-    t.integer  "hash_code"
+    t.string   "hash_code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
