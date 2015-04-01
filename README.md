@@ -566,9 +566,17 @@ magic_animals = Animal.where(breed: 'magic') #finds all animals that have a bree
 
 <em>3.26.15</em>
 
-<strong>Forms</strong>
+<strong>Forms</strong> are used to "GET" user input.
 
-(fill in from slides....
+What are forms for?
+<ul>
+	<li>User profiles</li>
+	<li>Creating new shirts</li>
+	<li>Getting contact info from visitors</li>
+	<li>Creating a tweet</li>
+	<li>Posting on Facebook</li>
+	<li>Searching on Google</li>
+</ul>
 
 Steps to create a form in the movies app.
 Use the `form_tag` to create the form.
@@ -582,9 +590,34 @@ This form is to search the movies. *`GET` method is typically used just for form
 <% end %>	
 ```
 
+Process for how a search works. When a user clicks 'Search':
+<ol>
+	<li>Goes to shirts#index.</li>
+	<li>Passes in params[:q] from the form. You see '?q=' in the address bar.</li>
+	<li>Models returns filter search results by name or description</li>
+</ol>
+
+
 <em>Validations and Creations</em>
 
-(fill in common validations from notes....)
+What happens when someone fills out data in a form, like putting letters into a phone number field? What about required fields, or email addresses? <em>Validations</em> are a way to ensure that your models only get data that works with what you want.
+
+```
+class Shirt < ActiveRecord::Base
+  validates :name, :description, :image, presence: true
+  validates :description, length: { minimum: 10 }
+end
+```
+
+The most common used validations are Presence, Length, Inclusion, Format.
+
+Form builders make creating forms for objects very easy. They <em>only</em> work with models.
+```
+<%= form_for @shirt do |f| %>
+<% end %>
+```
+
+
 
 In the Movie controller we add the line at the top: `validates :title, presence: true`.
 
