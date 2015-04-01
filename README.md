@@ -600,7 +600,7 @@ Process for how a search works. When a user clicks 'Search':
 
 <em>Validations and Creations</em>
 
-What happens when someone fills out data in a form, like putting letters into a phone number field? What about required fields, or email addresses? <em>Validations</em> are a way to ensure that your models only get data that works with what you want.
+What happens when someone fills out data in a form, like putting letters into a phone number field? What about required fields, or email addresses? <em>Validations</em> are a way to ensure that your models only get data that works with what you want. If the validation fails, it won't add a record to the database table. It's important that if validation fails the user is notified.
 
 ```
 class Shirt < ActiveRecord::Base
@@ -615,6 +615,16 @@ Form builders make creating forms for objects very easy. They <em>only</em> work
 ```
 <%= form_for @shirt do |f| %>
 <% end %>
+```
+
+Rails controllers require you to white-list which fields a form can send using strong parameters. This is used to protect your site.
+```
+# at the bottom of the controller
+private
+
+def shirt_params
+  params.require(:shirt).permit(:name, :description, :image)
+end
 ```
 
 
