@@ -11,18 +11,22 @@ class UrlsController < ApplicationController
   end
 
   def create
-  	# hash_code = rand(1_000_000..10_000_000-1)
-  	hash_code = SecureRandom.urlsafe_base64(8)
+  	hash_code = SecureRandom.urlsafe_base64(6)
   	@url = Url.new(url_params)
   	@url.hash_code = hash_code
   	@url.save
   	if @url.save
-			# redirect_to root_path
 			redirect_to url_path(@url)
-
 		else
-			render 'new'
+			# render 'new'
 		end
+  end
+
+  def redirectors
+  	code = params[:code]
+  	@url = Url.find_by(hash_code:code)
+  	link = @url.link
+  	redirect_to link
   end
 
   private
