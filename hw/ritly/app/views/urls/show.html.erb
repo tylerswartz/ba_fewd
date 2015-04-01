@@ -1,2 +1,12 @@
 <h1>Urls#show</h1>
 <p>Find me in app/views/urls/show.html.erb</p>
+
+<p>
+	Your url is: <%= link_to("localhost:3000/" + @url.hash_code) %>
+</p>
+
+<%#= "Your url is: "<%=localhost:3030/#{@url.hash_code}" %>
+
+
+
+<%#= link_to '<button type="button" class="add-btn all-movies">Show All Movies</button>'.html_safe, root_path %>

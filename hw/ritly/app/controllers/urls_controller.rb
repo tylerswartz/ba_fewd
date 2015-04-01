@@ -3,6 +3,7 @@ class UrlsController < ApplicationController
   end
 
   def show
+  	@url = Url.find(params[:id])
   end
 
   def new
@@ -16,7 +17,9 @@ class UrlsController < ApplicationController
   	@url.hash_code = hash_code
   	@url.save
   	if @url.save
-			redirect_to root_path
+			# redirect_to root_path
+			redirect_to url_path(@url)
+
 		else
 			render 'new'
 		end
