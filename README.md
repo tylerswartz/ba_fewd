@@ -531,7 +531,7 @@ group: development do
 	gem 'pry-rails'
 end
 ```
-Then run `gem bundle`. This give you the ability to debug with pry when you use the command `rails console`. If you are curious what methods a model has run `rails console` then call `ls` on the model (`ls Animal`). AcivteRecord::Querying#methods are the most common of the list to use.
+Then run `bundle install`. This give you the ability to debug with pry when you use the command `rails console`. If you are curious what methods a model has run `rails console` then call `ls` on the model (`ls Animal`). AcivteRecord::Querying#methods are the most common of the list to use.
 
 Once you get a list of methods for something you can get the documentation in pry by doing `? Animal.all` and it will tell you what `.all` does. 
 
