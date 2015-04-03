@@ -1,2 +1,18 @@
-<h1>Stories#index</h1>
-<p>Find me in app/views/stories/index.html.erb</p>
+<%= render 'nav' %>
+
+<div class="main-container">
+	<table class="table">
+		<tr>
+			<th>Votes</th>
+			<th>Title</th>
+			<th>Category</th>
+		</tr>
+		<% @stories.each do |story| %>
+			<tr class="story-row">
+				<td><%= story.upvotes %></td>
+				<td><%= story.title %></td>
+				<td><%= story.category %></td>
+			</tr>
+		<% end %>
+	</table>
+</div>
