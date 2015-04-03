@@ -629,10 +629,48 @@ end
 
 In the Movie controller we add the line at the top: `validates :title, presence: true`.
 
-<em>4.2.15</em>
-
 Instance method is `Person#search`. 
 Class method is `Person.search`. It is defined by having a method in the class of Person that is called `def self.search`.
+
+<em>4.2.15</em>
+
+(FILL IN CLASS NOTES FROM AUTHENTICATION LESSON)
+
+Code along. Adding Authentication to Rewsly.
+
+First run `bundle install`. This makes sure that you have the proper versions of the gem.
+
+Add to Gemfile. `gem 'devise'`. Run `bundle install` again to update gems.
+
+When adding bigger gems. You need to install them with an installation process. `rails generate` will show you what generators you have. Run `rails generate devise:install`. This install devise. Devise will actually tell you what you need to do to set it up.
+
+Find development.rb. Paste `config.action_mailer.default_url_options = { host: 'localhost', port:3000}`. This is from the first set of directions.
+
+Check #2 in the directions. Past code from #3 into the application.html.erb. #4 is not important because we are not using Heroku. #5 is when you modify the CSS. Use `rails g devise:views` to allow you to change the defaults that devise sets.
+
+Next, generate a model for devise. This will hold the user table. `rails generate devise user`.  Then `rake db:migrate`.
+
+Now, add login links to the homepage.html.erb.
+```
+<% if user_signed_in? %>
+	<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+
+	#website content, such as the list of stories.
+
+<% else %>
+	<%= link_to 'Signin', new_user_session_path %> #this might not be completely accurate. Need to verify.
+
+	# say something like, welcome, please sign in to view the stories.
+
+<% end %>
+```
+
+
+
+
+
+
+
 
 
 
