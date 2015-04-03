@@ -627,10 +627,12 @@ def shirt_params
 end
 ```
 
-
-
 In the Movie controller we add the line at the top: `validates :title, presence: true`.
 
+<em>4.2.15</em>
+
+Instance method is `Person#search`. 
+Class method is `Person.search`. It is defined by having a method in the class of Person that is called `def self.search`.
 
 
 

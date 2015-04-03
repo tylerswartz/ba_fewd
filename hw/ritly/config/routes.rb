@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   resources :urls, only: [:index, :new, :show, :create]
 	
 	get '/:code', to: 'urls#redirectors'
-	# get '/:code/preview', to: 'urls#preview'
+	get '/:code/preview', to: 'urls#preview'
 
 end

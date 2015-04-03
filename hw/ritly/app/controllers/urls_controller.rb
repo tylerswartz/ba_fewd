@@ -29,6 +29,13 @@ class UrlsController < ApplicationController
   	redirect_to link
   end
 
+  def preview
+    code = params[:code]
+    @url = Url.find_by(hash_code:code)
+    @link = @url.link
+  end
+
+
   private
 
   def url_params
