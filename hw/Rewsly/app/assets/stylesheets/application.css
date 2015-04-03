@@ -31,7 +31,7 @@ html, body {
 	background: #E1E1E1;
 	padding: 1px;
 	padding-bottom: 50px;
-	min-height: calc(100% - 185px);
+	min-height: calc(100% - 182px);
 }
 
 .form-container {
