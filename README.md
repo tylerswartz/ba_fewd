@@ -509,7 +509,7 @@ giraffe.destroy
 
 Command to generate a model:
 ```
-rails generate model Animal name:strong size:string weight:integer
+rails generate model Animal name:string size:string weight:integer
 ```
 
 This is what it looks like when it creates a model:
@@ -634,7 +634,33 @@ Class method is `Person.search`. It is defined by having a method in the class o
 
 <em>4.2.15</em>
 
-(FILL IN CLASS NOTES FROM AUTHENTICATION LESSON)
+<strong>Authentication</strong>
+
+How does it work?
+<ul>
+	<li>User identify with username and password</li>
+	<li>Tracking with a session</li>
+	<li>Storing with a cookie</li>
+	<li>Protecting with encryption</li>
+</ul>
+
+When storing passwords never store them as plain text. Always use encryption. The <strong>only</strong> types of encryption to use are <strong>bcrypt, blowfish, or SHA3</strong>.
+
+<strong>Sessions</strong> are a special browser feature that hold per-site data for as long as the browser is open. They go away when the browser is closed. When the user is authenticated, we store their user_id in the session. The user_id allows us to look up the user's info.
+
+<strong>Cookies</strong> are like sessions, except that they last until they expire. Cookies remain in between visits. They are used for storing small bits of data about users. Cookies allow web servers to provide a temporary unique identifier to a browser. Note, browser storage is not secure so sensitive data such as credit cards or passwords should <em>never</em> be stored in a cookie.
+
+Authentication gems. Devise is for authentication, uses bcrypt. Pundit is for authorization.
+
+Devise Installation Commands
+```
+gem 'devise' # in Gemfile
+rails g devise:install
+rails g devise User
+rake db:migrate
+# Add sign in/out helpers to application.html.erb
+```
+
 
 Code along. Adding Authentication to Rewsly.
 
@@ -653,12 +679,12 @@ Next, generate a model for devise. This will hold the user table. `rails generat
 Now, add login links to the homepage.html.erb.
 ```
 <% if user_signed_in? %>
-	<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+	<%= link_to 'Logout', destroy_user_session_path, method: :delete %> #must specify any method that is not Get. Ruby will never assume you want to delete something.
 
 	#website content, such as the list of stories.
 
 <% else %>
-	<%= link_to 'Signin', new_user_session_path %> #this might not be completely accurate. Need to verify.
+	<%= link_to 'Sign In', new_user_session_path %> 
 
 	# say something like, welcome, please sign in to view the stories.
 
