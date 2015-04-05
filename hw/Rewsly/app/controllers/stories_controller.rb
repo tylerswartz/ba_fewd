@@ -8,4 +8,12 @@ class StoriesController < ApplicationController
 
   def show
   end
+
+  def upvote
+  	Story.find(param[:id]).upvotes += 1
+  end
+
+  def downvote
+  	Story.find(param[:id]).upvotes -= 1
+  end
 end
