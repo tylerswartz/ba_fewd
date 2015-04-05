@@ -676,6 +676,8 @@ Check #2 in the directions. Past code from #3 into the application.html.erb. #4 
 
 Next, generate a model for devise. This will hold the user table. `rails generate devise user`.  Then `rake db:migrate`.
 
+It is important to restart your rails server after loading a new gem. `rails s`. Rails doesn't automatically load the new methods from a gem.
+
 Now, add login links to the homepage.html.erb.
 ```
 <% if user_signed_in? %>
