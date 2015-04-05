@@ -69,6 +69,7 @@ html, body {
 	border-left: 15px solid transparent;
 	border-right: 15px solid transparent;
 	border-bottom: 15px solid #000;
+	margin-left: calc(50% - 15px);
 }
 
 .arrow-down {
@@ -77,10 +78,12 @@ html, body {
 	border-left: 15px solid transparent;
 	border-right: 15px solid transparent;
 	border-top: 15px solid #000;
+	margin-left: calc(50% - 15px);
 }
 
 .votes {
 	padding: 5px;
+	text-align: center;
 }
 
 .table, th, td {
