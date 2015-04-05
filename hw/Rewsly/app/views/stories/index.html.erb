@@ -17,7 +17,13 @@
 			</tr>
 			<% @stories.each do |story| %>
 				<tr class="story-row">
-					<td><%= story.upvotes %></td>
+					<td>
+						<div class="arrow-up"></div>
+						<div class="votes">
+							<%= story.upvotes %>
+						</div>
+						<div class="arrow-down"></div>
+					</td>
 					<td><%= story.title %></td>
 					<td><%= story.category %></td>
 				</tr>
