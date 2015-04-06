@@ -1,17 +1,16 @@
 <h1>Welcome to Ritly</h1>
 
 <% if user_signed_in? %>
-  <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
-
-  <%= form_for(@url) do |f|%>
+    <%= form_for(@url) do |f|%>
   	<%= f.label 'Your Link', class: 'label' %>
   	<%= f.text_field :link, class: 'form-control', autocomplete: 'off'%>
   	<%= f.submit "Shorten!"%>
 	<% end %> 
-  
+  <br>
+  <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
 <% else %>
 	<p>You must be logged in to shorten a url.</p>
-	<%= link_to 'Sign In', new_user_session_path %>
+	<%= link_to 'Sign In', new_user_session_path %> | 
 	<%= link_to 'Sign Up', new_user_registration_path %>
 <% end %>
 

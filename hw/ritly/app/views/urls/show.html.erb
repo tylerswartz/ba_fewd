@@ -1,8 +1,7 @@
-<h1>Urls#show</h1>
-<p>Find me in app/views/urls/show.html.erb</p>
-
+<h2>Nice! We shortened that url for you.</h2>
 <p>
 	Your url is: <a href="localhost:3000/<%= @url.hash_code %>" target="_blank">localhost:3000/<%= @url.hash_code %><a/>
-
 </p>
+<p>If you are curious what the original url was just add "/preview' to the end of the URL above.</p>
 
+<%= link_to 'Home', root_path %>
