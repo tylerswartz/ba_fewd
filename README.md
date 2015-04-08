@@ -693,8 +693,63 @@ Now, add login links to the homepage.html.erb.
 <% end %>
 ```
 
+<em>4.7.15</em>
+
+<strong>Associations</strong>
+
+ERD connects two tables. 
+
+Types of connections
+```
+has_one
+has_many
+belongs_to
+has_and_belongs_to_many
+```
 
 
+
+
+Possible Twitter Tables
+-Users
+	:id
+	:handle
+	:email
+	:full name
+	:display name
+	:location
+	:mentioned count
+	:retweet count
+	:verified?
+	:picture
+-User Activity
+	:user id
+	:sign in
+	:log out
+-Tweets
+	:user id
+	:content
+	:location
+	:updated at
+	:retweet count
+	:favorited count
+	:flagged count
+-Direct Messages
+	:user id
+	:recipient
+	:content
+-Retweets
+	:user id
+	:tweet id
+	:retweet user
+-Followers (join table or join object)
+	:user id
+	:followed by user id
+-Hashtags
+	:hashtag
+	:user id
+	:tweet id
+-Favorites
 
 
 
