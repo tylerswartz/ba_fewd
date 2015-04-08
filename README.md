@@ -697,6 +697,8 @@ Now, add login links to the homepage.html.erb.
 
 <strong>Associations</strong>
 
+(fill in slides)
+
 ERD connects two tables. 
 
 Types of connections
@@ -705,12 +707,19 @@ has_one
 has_many
 belongs_to
 has_and_belongs_to_many
+has_many :through
 ```
 
+`belongs_to` is used wherever the foreign key is. Otherwise it might just be `has_one`.
+
+His slide uses Crow's Foot Notation to show the connections. 
+
+More info on associations can be found at the <a href="http://guides.rubyonrails.org/association_basics.html">Ruby on Rails site.</a> 
+
+Opposite side of `belongs_to` is `has_many`.
 
 
-
-Possible Twitter Tables
+<em>Possible Twitter Tables</em>
 -Users
 	:id
 	:handle
@@ -727,34 +736,48 @@ Possible Twitter Tables
 	:sign in
 	:log out
 -Tweets
-	:user id
-	:content
-	:location
-	:updated at
-	:retweet count
-	:favorited count
+	:user id (belongs_to)
+	:content (has_one)
+	:location (has_one)
+	:hashtags (has_and_belongs_to_many)
+	:updated at 
+	:retweeted by (has_many)
+	:favorited by (has_many)
 	:flagged count
 -Direct Messages
-	:user id
-	:recipient
+	:from user id
+	:to user id
 	:content
 -Retweets
 	:user id
 	:tweet id
 	:retweet user
 -Followers (join table or join object)
-	:user id
-	:followed by user id
+	:user id (has_and_belongs_to_many)
+	:followed by user id (has_and_belongs_to_many)
 -Hashtags
-	:hashtag
-	:user id
-	:tweet id
+	:hashtag id (has_one)
+	:user id (has_many)
+	:tweet id (has_many)
 -Favorites
 
+<em>Netflix Tables and Associations</em>
+-Users
+	has_many :reviews
+	has_many :movies, through: :queue
+-Movies
+	has_many :reviews
+	belongs_to :genres
+-Genres
+	has_many :movies 
+-Reviews
+	belongs_to :movie
+	belongs_to :user
+-Queue (join table)
+	:user_id
+	:movie_id
 
-
-
-
+Model your final project and another website (hacker news) in a text file called 'associations_homework'.
 
 
 
