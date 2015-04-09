@@ -750,6 +750,12 @@ More info on associations can be found at the <a href="http://guides.rubyonrails
 
 Opposite side of `belongs_to` is `has_many`.
 
+<strong>Join Tables</strong> or link tables connect two other tables. They usually only have two foreign keys.
+```
+has_and_belongs_to_many
+has_one :through
+has_many :through
+```
 
 <em>Possible Twitter Tables</em>
 -Users
