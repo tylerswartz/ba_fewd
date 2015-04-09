@@ -695,19 +695,51 @@ Now, add login links to the homepage.html.erb.
 
 <em>4.7.15</em>
 
-<strong>Associations</strong>
+<strong>Model Associations</strong>. Models should only store data for one 'thing'. Associations allow us to link models.
 
-(fill in slides)
+An association using an <em>entity-relationship diagram</em>.
+![Alt text](/users-urls2.png)
 
-ERD connects two tables. 
-
-Types of connections
 ```
-has_one
-has_many
+create_table "urls", force: true do |t|
+  t.text     "link"
+  t.string   "hash_code"
+  t.integer  "user_id"
+end
+
+class Url < ActiveRecord::Base
+  belongs_to :user
+end
+
+class User < ActiveRecord::Base
+  has_many :urls
+end
+```
+
+<strong>Keys</strong>. The primary key is the field that uniquely identifies each row of a table. In Rails this is <em>always "id"</em>. The foreign key identifies which row of another table it is associated with: user_id, post_id.
+```
+class User < ActiveRecord::Base
+  has_many :urls
+end
+
+class Url < ActiveRecord::Base
+  belongs_to :user
+end
+
+user.id         # user primary key
+url.id          # url primary key
+
+url.user_id     # user foreign key
+```
+
+Types of associations (in order of common usage.)
+```
 belongs_to
+has_many
+has_one
 has_and_belongs_to_many
 has_many :through
+has_one :through
 ```
 
 `belongs_to` is used wherever the foreign key is. Otherwise it might just be `has_one`.
@@ -779,7 +811,7 @@ Opposite side of `belongs_to` is `has_many`.
 
 Model your final project and another website (hacker news) in a text file called 'associations_homework'.
 
-
+<em>4.9.15</em>
 
 
 
