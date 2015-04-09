@@ -758,7 +758,10 @@ has_many :through
 ```
 
 <em>Possible Twitter Tables</em>
--Users
+<ul>
+	<lh>Users</lh>	
+	<li>:id</li>
+</ul>-Users
 	:id
 	:handle
 	:email
