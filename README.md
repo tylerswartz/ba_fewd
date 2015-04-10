@@ -757,6 +757,33 @@ has_one :through
 has_many :through
 ```
 
+<em>Netflix Tables and Associations</em>
+<ul>
+	<lh>Users</lh>
+		<li>has_many :reviews</li>
+	<li>has_many :movies, through: :queue</li>
+</ul>
+<ul>
+	<lh>Movies</lh>
+	<li>has_many :reviews</li>
+	<li>belongs_to :genres</li>
+</ul>
+<ul>
+	<lh>Genres</lh>
+	<li>has_many :movies </li>
+</ul>
+<ul>
+	<lh>Reviews</lh>
+	<li>belongs_to :movie</li>
+	<li>belongs_to :user</li>
+</ul>
+<ul>
+	<lh>Queue (join table)</lh>
+	<li>:user_id</li>
+	<li>:movie_id</li>
+</ul>
+
+
 <em>Possible Twitter Tables</em>
 <ul>
 	<lh>Users</lh>	
@@ -813,31 +840,7 @@ has_many :through
 	<li>:tweet id (has_many)</li>
 </ul>
 
-<em>Netflix Tables and Associations</em>
-<ul>
-	<lh>Users</lh>
-		<li>has_many :reviews</li>
-	<li>has_many :movies, through: :queue</li>
-</ul>
-<ul>
-	<lh>Movies</lh>
-	<li>has_many :reviews</li>
-	<li>belongs_to :genres</li>
-</ul>
-<ul>
-	<lh>Genres</lh>
-	<li>has_many :movies </li>
-</ul>
-<ul>
-	<lh>Reviews</lh>
-	<li>belongs_to :movie</li>
-	<li>belongs_to :user</li>
-</ul>
-<ul>
-	<lh>Queue (join table)</lh>
-	<li>:user_id</li>
-	<li>:movie_id</li>
-</ul>
+
 
 Model your final project and another website (hacker news) in a text file called 'associations_homework'.
 
