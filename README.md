@@ -761,62 +761,83 @@ has_many :through
 <ul>
 	<lh>Users</lh>	
 	<li>:id</li>
-</ul>-Users
-	:id
-	:handle
-	:email
-	:full name
-	:display name
-	:location
-	:mentioned count
-	:retweet count
-	:verified?
-	:picture
--User Activity
-	:user id
-	:sign in
-	:log out
--Tweets
-	:user id (belongs_to)
-	:content (has_one)
-	:location (has_one)
-	:hashtags (has_and_belongs_to_many)
-	:updated at 
-	:retweeted by (has_many)
-	:favorited by (has_many)
-	:flagged count
--Direct Messages
-	:from user id
-	:to user id
-	:content
--Retweets
-	:user id
-	:tweet id
-	:retweet user
--Followers (join table or join object)
-	:user id (has_and_belongs_to_many)
-	:followed by user id (has_and_belongs_to_many)
--Hashtags
-	:hashtag id (has_one)
-	:user id (has_many)
-	:tweet id (has_many)
--Favorites
+	<li>:id</li>
+	<li>:handle</li>
+	<li>:email</li>
+	<li>:full name</li>
+	<li>:display name</li>
+	<li>:location</li>
+	<li>:mentioned count</li>
+	<li>:retweet count</li>
+	<li>:verified?</li>
+	<li>:picture</li>
+</ul>
+<ul>
+	<lh>User Activity</lh>
+	<li>:user id</li>
+	<li>:sign in</li>
+	<li>:log out</li>
+</ul>
+<ul>
+	<lh>Tweets</lh>
+	<li>:user id (belongs_to)</li>
+	<li>:content (has_one)</li>
+	<li>:location (has_one)</li>
+	<li>:hashtags (has_and_belongs_to_many)</li>
+	<li>:updated at </li>
+	<li>:retweeted by (has_many)</li>
+	<li>:favorited by (has_many)</li>
+	<li>:flagged count</li>
+</ul>
+<ul>
+	<lh>Direct Messages</lh>
+	<li>:from user id</li>
+	<li>:to user id</li>
+	<li>:content</li>
+</ul>
+<ul>
+	<lh>Retweets</lh>
+	<li>:user id</li>
+	<li>:tweet id</li>
+	<li>:retweet user</li>
+</ul>
+<ul>
+	<lh>Followers (join table)</lh>
+	<li>:user id (has_and_belongs_to_many)</li>
+	<li>:followed by user id (has_and_belongs_to_many)</li>
+</ul>	
+<ul>
+	<lh>Hashtags</lh>
+	<li>:hashtag id (has_one)</li>
+	<li>:user id (has_many)</li>
+	<li>:tweet id (has_many)</li>
+</ul>
 
 <em>Netflix Tables and Associations</em>
--Users
-	has_many :reviews
-	has_many :movies, through: :queue
--Movies
-	has_many :reviews
-	belongs_to :genres
--Genres
-	has_many :movies 
--Reviews
-	belongs_to :movie
-	belongs_to :user
--Queue (join table)
-	:user_id
-	:movie_id
+<ul>
+	<lh>Users</lh>
+		<li>has_many :reviews</li>
+	<li>has_many :movies, through: :queue</li>
+</ul>
+<ul>
+	<lh>Movies</lh>
+	<li>has_many :reviews</li>
+	<li>belongs_to :genres</li>
+</ul>
+<ul>
+	<lh>Genres</lh>
+	<li>has_many :movies </li>
+</ul>
+<ul>
+	<lh>Reviews</lh>
+	<li>belongs_to :movie</li>
+	<li>belongs_to :user</li>
+</ul>
+<ul>
+	<lh>Queue (join table)</lh>
+	<li>:user_id</li>
+	<li>:movie_id</li>
+</ul>
 
 Model your final project and another website (hacker news) in a text file called 'associations_homework'.
 
