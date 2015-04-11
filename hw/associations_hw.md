@@ -40,7 +40,8 @@ belongs_to :user
 <em>Three Tables for HN</em>
 
 Users
-	:name
+	:fname
+	:lname
 	:email
 has_many :articles
 

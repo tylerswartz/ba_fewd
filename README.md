@@ -846,8 +846,18 @@ Model your final project and another website (hacker news) in a text file called
 
 <em>4.9.15</em>
 
+<strong>User stories</strong> a sentence that describes a single application feature from the user's perspective.
 
+User stories for Instagram:
+<ol>
+	<li>As a user, I can upload a photo</li>
+	<li>As a user, I can see my uploaded photos in my collection</li>
+	<li>As a visitor, I can see other users uploaded photos </li>
+	<li>As a visitor, I can link to a photo with a short URL</li>
+	<li>As a user, I can comment on a photo</li>
+</ol>
 
+Tips for writing down user stories. Don't worry about how you structure them. The best way to write a user story is without categorizing or organizing. Write down anything that comes to mind; don't block your creativity by trying to write it some certain way. You can organize it later.
 
 
 
