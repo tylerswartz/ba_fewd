@@ -7,6 +7,8 @@ class MuseumsController < ApplicationController
   end
 
   def show
+    @museum = Museum.find(params[:id])
+    @paintings = Painting.where(museum_id:(params[:id]))
   end
 
   def create

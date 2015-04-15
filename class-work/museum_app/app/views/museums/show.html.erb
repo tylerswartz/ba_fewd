@@ -1,2 +1,34 @@
 <%= render partial: "app_homes/nav" %>
 
+
+<h3>You are viewing paintings in <%= @museum.name %></h3>
+<%= link_to 'Back to All Museums', museums_path %>
+<br>
+<br>
+<br>
+
+
+<table class="table">
+	<tr>
+		<th>Painting</th>
+		<th>Title</th>
+		<th>Artist</th>
+		<th>Year</th>
+	</tr>
+	<% @paintings.each do |painting| %>
+		<tr class="story-row">
+			<td>
+				<%= image_tag(painting.image_url, width: "100px") %>
+			</td>
+			<td>
+				<%= painting.title %>
+			</td>
+			<td>
+				<%= painting.artist_id %>
+			</td>
+			<td>
+				<%= painting.year %>
+			</td>
+		</tr>
+	<% end %>
+</table>
