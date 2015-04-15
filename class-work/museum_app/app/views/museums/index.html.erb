@@ -1,4 +1,4 @@
-<h1>Museums</h1>
+<%= render partial: "app_homes/nav" %>
 
 <table class="table">
 	<tr>
@@ -8,7 +8,7 @@
 	<% @museums.each do |museum| %>
 		<tr class="story-row">
 			<td>
-				<%= link_to 'Name', museum_path(museum) %>
+				<%= link_to museum.name, museum_path(museum) %>
 			</td>
 			<td>
 				<%= museum.city %>
@@ -17,6 +17,4 @@
 	<% end %>
 </table>
 
-<br>
-<%= link_to 'Home', root_path %>
 
