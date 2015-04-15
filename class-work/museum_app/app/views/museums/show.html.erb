@@ -24,7 +24,7 @@
 				<%= painting.title %>
 			</td>
 			<td>
-				<%= painting.artist_id %>
+				<%= link_to Artist.find(painting.artist_id).name, artist_path(painting.artist_id)  %>
 			</td>
 			<td>
 				<%= painting.year %>
@@ -32,3 +32,5 @@
 		</tr>
 	<% end %>
 </table>
+
+
