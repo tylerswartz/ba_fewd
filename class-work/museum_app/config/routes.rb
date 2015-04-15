@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  root 'musuems#index'
+  root 'museums#index'
 
-  resources :musuems, except: [:destory]
+  resources :museums, except: [:destory]
   resources :artists, except: [:destory]
   resources :paintings, except: [:destory]
 end
