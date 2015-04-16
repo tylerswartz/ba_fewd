@@ -1,2 +1,31 @@
-<h1>Paintings#index</h1>
-<p>Find me in app/views/paintings/index.html.erb</p>
+<%= render partial: "app_homes/nav" %>
+
+<table class="table">
+	<tr>
+		<th>Painting</th>
+		<th>Title</th>
+		<th>Artist</th>
+		<th>Year</th>
+		<th>Museum</th>
+	</tr>
+	<% @paintings.each do |painting| %>
+		<tr class="story-row">
+			<td>
+				<%= image_tag(painting.image_url, width: "100px") %>
+			</td>
+			<td>
+				<%= painting.title %>
+			</td>
+			<td>
+				<%= link_to Artist.find(painting.artist_id).name, artist_path(painting.artist_id)  %>
+			</td>
+			<td>
+				<%= painting.year %>
+			</td>
+			<td>
+				<%= painting.museum_id %>
+				<%= link_to Museum.find(painting.museum_id).name, museum_path(painting.museum_id) %>
+			</td>
+		</tr>
+	<% end %>
+</table>

@@ -88,7 +88,7 @@ Painting.create [
 		title: "Morning",
 		year: 2004,
 		artist_id: 1,
-		museum_id: 4,
+		museum_id: 1,
 		image_url: "http://cdn.nahright.com/news/m.php/2010/07/kanye-west-power-single-cover.png"
 	}
 ]
