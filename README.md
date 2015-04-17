@@ -859,6 +859,37 @@ User stories for Instagram:
 
 Tips for writing down user stories. Don't worry about how you structure them. The best way to write a user story is without categorizing or organizing. Write down anything that comes to mind; don't block your creativity by trying to write it some certain way. You can organize it later.
 
+<em>4.16.15</em>
+
+<strong>Heroku</strong>
+
+Directions to setup can be found [here](https://devcenter.heroku.com/articles/getting-started-with-rails4). 
+
+-Login to heroku.com and click 'create app'.
+
+In sublime edit the gemfile of the application to add postgres and sql.
+```
+group :development, :test do
+	gem 'sqlite3'
+end
+
+group :production do
+	gem 'pg'
+end
+```
+
+Then run `bundle install --without production`.
+
+In addition to using the `pg` gem, you’ll also need to ensure the `config/database.yml` is using the `postgresql` adapter. [Link for more info](https://devcenter.heroku.com/articles/getting-started-with-rails4#write-your-app)
+
+Back on command line from the project folder:
+```
+heroku git:remote -a PROJECT-NAME
+git add .
+git commit -am "deploying the app"
+git push heroku master
+```
+
 
 
 
