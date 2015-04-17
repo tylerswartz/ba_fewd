@@ -1,2 +1,30 @@
-<h1>Artists#show</h1>
-<p>Find me in app/views/artists/show.html.erb</p>
+<%= render partial: "app_homes/nav" %>
+
+<h2>Artist Profile</h2>
+<h3><em><%= @artist.name %></em> from <em><%= @artist.hometown %></em> and born in<em><%= @artist.birth %></em></h3>
+
+
+<table class="table">
+	<tr>
+		<th>Painting</th>
+		<th>Title</th>
+		<th>Year</th>
+		<th>Museum</th>
+	</tr>
+	<% @paintings.each do |painting| %>
+		<tr class="story-row">
+			<td>
+				<%= image_tag(painting.image_url, width: "100px") %>
+			</td>
+			<td>
+				<%= painting.title %>
+			</td>
+			<td>
+				<%= painting.year %>
+			</td>
+			<td>
+				<%= link_to Museum.find(painting.museum_id).name, museum_path(painting.museum_id) %>
+			</td>
+		</tr>
+	<% end %>
+</table>

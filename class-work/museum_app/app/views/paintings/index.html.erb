@@ -23,7 +23,6 @@
 				<%= painting.year %>
 			</td>
 			<td>
-				<%= painting.museum_id %>
 				<%= link_to Museum.find(painting.museum_id).name, museum_path(painting.museum_id) %>
 			</td>
 		</tr>

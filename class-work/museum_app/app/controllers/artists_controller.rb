@@ -7,6 +7,8 @@ class ArtistsController < ApplicationController
   end
 
   def show
+    @artist = Artist.find(params[:id])
+    @paintings = Painting.where(artist_id:(params[:id]))
   end
 
   def create
